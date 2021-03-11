@@ -67,7 +67,17 @@ function createThumbnail() {
     thumbnail.appendChild(displayedImg[i]);
   }
 
+  VanillaTilt.init(document.querySelectorAll(".thumb"), {
+    max: 25,
+    speed: 400,
+    glare: true, 
+    "max-glare": 0.8,
+    axis: 'x',
+  });
+
 } createThumbnail();
+
+
 
 
 
