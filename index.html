@@ -11,15 +11,14 @@
 </head>
 <body>
 
-    <header class="navbar">
+    <header class="navbar" id="header">
         <a href="" class="logo">Meow Development<span style="margin-left: 10px;">&hearts;</span></a>
         <div class="burgerToggle" onclick="toggleMenu()"></div>
         <nav class="nav">
-            <a class="underline" href="" onclick="toggleMenu()">Accueil</a>
+            <a class="underline" href="#header" onclick="toggleMenu()">Accueil</a>
             <a class="underline" href="#wall" onclick="toggleMenu()">The Wall</a>
             <a class="underline" href="#team" onclick="toggleMenu()">The Meow Team</a>
-            <a class="underline" href="" onclick="toggleMenu()">Catisfactions</a>
-            <a class="underline" href="" onclick="toggleMenu()">Contact</a>
+            <a class="underline" href="#contact" onclick="toggleMenu()">Contact</a>
         </nav>
     </header>
 
@@ -84,9 +83,9 @@
         </div>
     </section>
 
-    <section class="contact" id="contact">
+    <section class="contact">
 
-        <div class="block">
+        <div class="block" id="contact">
             <h1 class="title">Send us a <span class="pink">M</span>eow !</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora pariatur, laboriosam animi</p>
         </div>
