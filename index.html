@@ -17,6 +17,7 @@
         <nav class="nav">
             <a class="underline" href="" onclick="toggleMenu()">Accueil</a>
             <a class="underline" href="#wall" onclick="toggleMenu()">The Wall</a>
+            <a class="underline" href="#team" onclick="toggleMenu()">The Meow Team</a>
             <a class="underline" href="" onclick="toggleMenu()">Catisfactions</a>
             <a class="underline" href="" onclick="toggleMenu()">Contact</a>
         </nav>
@@ -25,16 +26,17 @@
     <section class="header">
 
         <div class="content">
-            <h1 class="title">Catisfaction !</h1>
-            <p><span class"animated">A</span>lways trusted, always satisfied !</p>
+            <h1 class="title">Catisfaction </h1>
+            <p>Always Satisfied,</p>
+            <p>Meow Approved !</p>
         </div>
 
     </section>
 
     <section class="wall" id="wall">
 
-        <div>
-            <h1 class="title">The Wall</h1>
+        <div class="block">
+            <h1 class="title">The <span class="pink">W</span>all</h1>
         </div>
         <div class="thumbnail"></div>
         <div class="button-block">
@@ -43,17 +45,20 @@
 
     </section>
 
-    <section class="catisfaction" id="catisfaction">
+    <section class="team" id="team">
 
         <div class="block">
-            <h1 class="title">The Meow Team</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora pariatur, laboriosam animi</p>
+            <div class="bockDescription">
+                <h1 class="title">The Meow <span class="pink">T</span>eam</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora pariatur, laboriosam animi</p>
+            </div>
+            <div class="bg"></div>
         </div>
 
         <div class="team">
             <div class="card">
                 <div class="imgBx">
-                    <img src="./img/sm_22.jpg" alt="">
+                    <img src="./img/team/sm_22.jpg" alt="">
                 </div>
                 <div class="card-content">
                     <p>
@@ -66,7 +71,7 @@
 
             <div class="card">
                 <div class="imgBx">
-                    <img src="./img/sm_17.jpg" alt="">
+                    <img src="./img/team/sm_17.jpg" alt="">
                 </div>
                 <div class="card-content">
                     <p>
@@ -81,7 +86,39 @@
 
     <section class="contact" id="contact">
 
+        <div class="block">
+            <h1 class="title">Send us a <span class="pink">M</span>eow !</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora pariatur, laboriosam animi</p>
+        </div>
+
+        <form action="">
+            <div class="contactForm">
+                <div class="inputBox">
+                    <input type="text" name="name" id="name" placeholder="Name">
+                </div>
+                <div class="inputBox">
+                    <input type="email" name="email" id="email" placeholder="Email">
+                </div>
+                <div class="inputBox">
+                    <textarea name="message" id="mesage" placeholder="Meow Message !"></textarea>
+                </div>
+                <div class="inputBox" style="margin-bottom: 0;">
+                    <button type="submit">Send</button>
+                </div>
+            </div>
+        </form>
+
     </section>
+
+    <footer class="footer">
+
+        <div class="block">
+            <h3>Meow Development Agency</h3>
+            <p><span class="blue">Y</span>ohann & <span class="pink">J</span>ustine</p>
+            <p class="love">Made with <span style="text-decoration: line-through;">Cats</span> Love, Copyright &copy; 2021 </p>
+        </div>
+
+    </footer>
 
 
     <script src="app.js" type="text/javascript"></script>

@@ -40,6 +40,21 @@ const img = [
   24,
   25,
   26,
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34,
+  35,
+  36,
+  37,
+  38,
+  39,
+  40,
+  41,
 ];
 
 displayedImg = [];
@@ -59,7 +74,7 @@ function createThumbnail() {
       p = numbers.includes(n);
       if (!p) {
         numbers.push(n);
-        displayedImg[i].src = "./img/sm_" + n + ".jpg";
+        displayedImg[i].src = "./img/cats/sm_" + n + ".jpg";
         displayedImg[i].classList.add('thumb')
       }
     } while (p);
