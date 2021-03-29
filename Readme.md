@@ -1,8 +1,7 @@
 # Meow Development, a fake web Agency with Cats !
-### Made by Yohann Hommet
+#### Made by ***Yohann Hommet***
 
 
-Voici un petit site que j'ai fait pour m'amuser. Le but était d'utiliser le system de grilles pour la navbar, les  flex box si besoin, et de faire un menu burger responsive (avec JS).  
-Je paufine le site à mesure que les idées viennent :)
-
+Voici un site One Page que j'ai fait pour m'amuser et m'exercer.  
+Le but était de faire un menu Burger dans un premier temps, puis d'utiliser le system de grilles, et les flexbox si besoin (et de rendre le site Responsive).  
 
