@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
 
-root {
+:root {
     --primary: #52f1ff;
     --secondary: #ff0073;
     --black: #050505;
@@ -16,8 +16,35 @@ root {
     font-size: 16px;
 }
 
+body {
+    background-color: var(--black);
+}
+
+#container {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 100px;
+}
+
+h2 {
+    color: #fff;
+    font-size: 5.5rem;
+}
+
 p::first-letter {
-    color: #52f1ff;
+    color: var(--primary);
+}
+.blue {
+    color: var(--primary);
+}
+.pink {
+    color: var(--secondary);
+}
+.sub {
+    font-size: 5.5rem;
 }
 
 /* ************************ NAVBAR ****************************** */
@@ -26,16 +53,18 @@ p::first-letter {
     position: fixed;
     top: 0;
     left: 0;
-
+    
     display: grid;
-    grid-template-columns: 5% 1fr 1fr 5%;
+    grid-template-columns: 40% 60%;
     grid-template-rows: 100px;
     height: 100px;
     width: 100%;
-
+    padding: 0 100px;
+    margin: auto;
+    
     background-color: rgb(5, 5, 5, 0.7);
     backdrop-filter: blur(10px);
-
+    
     transition: all 0.35s linear;
     z-index: 100;
 }
@@ -47,13 +76,13 @@ p::first-letter {
 }
 
 #header a.logo {
-    grid-column: 2/3;
+    grid-column: 1/2;
     align-self: center;
-
-    font-size: 1.6em;
+    
+    font-size: 1.6rem;
     font-weight: 500;
-    letter-spacing: 0.05em;
-
+    letter-spacing: 0.05rem;
+    
     color: rgb(0, 234, 255);
     text-decoration: none;
 }
@@ -65,39 +94,38 @@ p::first-letter {
 #header nav {
     display: flex;
     justify-content: space-evenly;
-
-    grid-column: 3/4;
+    grid-column: 2/3;
 }
 
 #header nav a {
+    position: relative;
+    align-self: center;
     color: #fff;
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    align-self: center;
     text-transform: uppercase;
     font-weight: 300;
-    font-size: 0.9em;
-    position: relative;
-    transition: all 0.25s linear;
+    font-size: 0.9rem;
     letter-spacing: 0.1em;
+    transition: all 0.25s linear;
 }
 
 #header nav a:hover {
     color: rgb(0, 234, 255);
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 400;
 }
 
 #header nav a:after {
     content: "";
     position: absolute;
+    bottom: -15%;
+    left: 0;
+    
     height: 2px;
     width: 100%;
     display: block;
     background-color: rgb(0, 234, 255);
-    bottom: -15%;
-    left: 0;
+    
     transform-origin: center;
     transition: 0.3s linear;
     transform: scale(0);
@@ -107,7 +135,7 @@ p::first-letter {
     transform: scale(1);
 }
 
-.burgerToggle {
+#header .burgerToggle {
     display: none;
 }
 
@@ -117,30 +145,28 @@ p::first-letter {
 
 
 
-section {
-    padding: 100px;
-}
-
 #banner {
     background-image: url(../img/bg_chat.jpg);
     background-size: cover;
     background-position: center center;
-
+    
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: calc(100vh - 70px);
 }
 
 #banner .content {
-    margin-top: 10rem;
-    margin-left: 3rem;
+    align-self: center;
+    justify-self: flex-start;
+    margin-top: -7rem;
 }
 
 #banner .content .title {
     color: #fff;
-    font-size: 6rem;
-    letter-spacing: 0.15rem;
+    font-size: 7rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgb(255, 255, 255);
@@ -148,8 +174,8 @@ section {
 
 #banner .content p {
     color: rgb(195, 195, 195);
-    margin-top: 1,2rem;
-    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    font-size: 2.9rem;
     font-weight: 300;
 }
 
@@ -160,16 +186,14 @@ section {
 
 
 #wall {
-    background-color: #050505;
+    background-color: var(--black);
     display: grid;
-
 }
 
-#wall .block .title {
-    color: #fff;
-    text-align: center;
+#wall h2 {
+    text-align: right;
     margin-bottom: 50px;
-    font-size: 5.5rem;
+    margin-right: 100px;
 }
 
 #wall .thumbnail {
@@ -187,7 +211,7 @@ section {
     position: relative;
     filter: opacity(0.8);
     margin: auto;
-
+    
     transition: all 0.25s linear;
     animation: pop 1.8s ease-in-out normal;
 }
@@ -197,22 +221,21 @@ section {
     filter: scale(1.08)
 }
 
-
 #wall .button-block {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 #wall .button-block .button {
-    background: rgb(5, 5, 5);
+    background: var(--black);
     color: white;
     font-size: 2rem;
     border: 1px solid white;
     padding: 5px 65px 7px;
     position: relative;
-
+    
     box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.2);
     transition: 0.3s ease-in-out;
     z-index: 2;
@@ -223,7 +246,7 @@ section {
     text-shadow: -3px 3px 4px rgba(5, 5, 5, 0.5);
     box-shadow: 0 0 15px 3px rgba(255, 255, 255, 0.5);
     border: 1px solid black;
-
+    
     transition: color 0.8s ease-in-out;
 }
 
@@ -250,7 +273,7 @@ section {
 
 
 
-section.team {
+#team {
     height: 600px;
     width: 100%;
     padding: 100px 150px;
@@ -339,7 +362,8 @@ div.card:hover {
 .card .card-content {
     display: block;
     padding: 30px 20px;
-
+    transform: translateZ(20px);
+    
     transition: all 0.4s ease;
 }
 
@@ -349,7 +373,7 @@ div.card:hover {
     letter-spacing: 1px;
     padding: 0 10px;
     transform: translateZ(30px);
-
+    
 }
 
 .card .card-content p,
@@ -363,15 +387,6 @@ h3 {
     margin-top: 20px;
     font-size: 2em;
     letter-spacing: 0.1em;
-}
-
-
-.blue {
-    color: #52f1ff;
-}
-
-.pink {
-    color: #ff0979;
 }
 
 
@@ -402,7 +417,7 @@ section .block p {
     font-weight: 300;
 }
 section.contact form {
-
+    
     display: grid;
     grid-template-columns: 60% 40%;
     grid-template-rows: 1fr;
@@ -416,11 +431,11 @@ section.contact form .contactForm {
     padding: 50px 50px;
     width: 100%;
     margin: auto;
-
+    
     background: rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur( 4px );
-
+    
     box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.4);
 }
 .contactForm .inputBox {
@@ -451,7 +466,7 @@ section.contact form button {
     border: 1px solid white;
     padding: 2px 45px 5px;
     position: relative;
-
+    
     box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.2);
     transition: 0.3s ease-in-out;
     z-index: 2;
@@ -462,7 +477,7 @@ section.contact form button:hover {
     text-shadow: -3px 3px 4px rgba(5, 5, 5, 0.5);
     box-shadow: 0 0 15px 3px rgba(255, 255, 255, 0.5);
     border: 1px solid black;
-
+    
     transition: color 0.8s ease-in-out;
 }
 section.contact form button::before {
@@ -510,12 +525,12 @@ footer .block .love {
     align-items: center;
     font-size: 1.3em;
     margin-top: 80px;
-
+    
 }
 footer .block .love::first-letter {
     color: rgb(151, 151, 151);
-
-
+    
+    
 }
 
 
@@ -546,7 +561,7 @@ footer .block .love::first-letter {
         margin-left: 10%;
         width: 500px;
     }
-
+    
     section.contact form {
         grid-template-columns: 40% auto;
     }
@@ -559,7 +574,7 @@ footer .block .love::first-letter {
     section.contact form {
         grid-template-columns: 50% auto;
     }
-
+    
 }
 @media (max-width: 1800px) {
     section.wall .thumbnail {
@@ -569,10 +584,10 @@ footer .block .love::first-letter {
     section.contact form {
         grid-template-columns: 60% auto;
     }
-
+    
 }
 @media (max-width: 1350px) {
-
+    
     section.wall {
         padding: 100px 100px;
     }
@@ -580,13 +595,13 @@ footer .block .love::first-letter {
         grid-template-columns: repeat(2, 350px);
         grid-template-rows: repeat(6, 350px);
     }
-
+    
 }
 
 /* ************************** */
 
 @media (max-width: 1150px) {
-       
+    
     section.wall .block .title,
     section.team .block .title,
     section.contact .block .title {
@@ -597,13 +612,13 @@ footer .block .love::first-letter {
     section.contact .block p {
         font-size: 1.6em;
     }
-
+    
     /* *** */
     section.wall .thumbnail {
         grid-template-columns: repeat(2, 350px);
         grid-template-rows: repeat(6, 350px);
     }
-
+    
     /* **** */
     section.team {
         padding: 100px 100px;
@@ -615,12 +630,12 @@ footer .block .love::first-letter {
     div.card {
         margin: 0 auto 40px;
     }
-
+    
     /* **** */
     section.contact {
         padding: 1000px 100px 50px;
     }
-
+    
     /* **** */
     section.contact form {
         grid-template-columns: 1fr;
@@ -628,11 +643,11 @@ footer .block .love::first-letter {
         background-size: contain;
         margin-top: 50px;
     }
-
+    
     section.contact form {
         grid-template-columns: 60% auto;
     }
-
+    
 }
 
 
@@ -640,7 +655,7 @@ footer .block .love::first-letter {
 
 
 @media (max-width: 1000px) {
-
+    
     section.wall .block .title,
     section.team .block .title,
     section.contact .block .title {
@@ -651,13 +666,13 @@ footer .block .love::first-letter {
     section.contact .block p {
         font-size: 1.6em;
     }
-
+    
     /* *** */
-
+    
     header nav {
         display: none;
     }
-
+    
     .burgerToggle {
         display: block;
         position: relative;
@@ -668,16 +683,16 @@ footer .block .love::first-letter {
         background-repeat: no-repeat;
         background-position: center;
         cursor: pointer;
-
+        
         transition: 0.2s linear;
         margin: auto 0;
         margin-left: auto;
     }
-
+    
     .burgerToggle:hover {
         filter: opacity(0.8);
     }
-
+    
     .burgerToggle.active {
         display: block;
         position: relative;
@@ -686,20 +701,20 @@ footer .block .love::first-letter {
         background-repeat: no-repeat;
         background-position: center;
         cursor: pointer;
-
+        
         margin: auto 0;
         margin-left: auto;
-
+        
         transition: all 0.4s ease-in-out;
     }
-
+    
     .burgerToggle.active:hover {
         transform: rotate(180deg);
         background-size: 18px;
         filter: opacity(0.8);
         transition: all 0.4s linear;
     }
-
+    
     /* *** The Nav outside the screen before we call it */
     .nav {
         display: block;
@@ -708,67 +723,67 @@ footer .block .love::first-letter {
         grid-column: 3/5;
         grid-row: 2/3;
         height: 100vh;
-
+        
         opacity: 0;
-
+        
         transform: translateY(-1500px);
         /* transform: translateX(500px); */
         transition: all 0.7s linear;
         transform-origin: top;
     }
-
+    
     .nav a {
         justify-content: center;
         margin: 20px 0;
         font-size: 1.2em;
     }
-
+    
     .nav.active {
         display: block;
         justify-content: center;
         grid-column: 3/5;
         grid-row: 2/3;
         height: 100vh;
-
+        
         background: rgba(5, 5, 5, 0.7);
         backdrop-filter: blur(7px);
-
+        
         opacity: 1;
         transform: translateY(0);
         transition: all 0.6s linear;
     }
-
+    
     .nav.active a {
         justify-content: center;
         margin: 20px 0;
         font-size: 1.2em;
     }
-
+    
     .nav.active a:hover {
         font-size: 1.3em;
         letter-spacing: 0.2em;
         font-weight: 400;
     }
-
+    
     .nav.active a:first-child,
     .nav a:first-child {
         margin-top: 50%;
     }
-
+    
     .nav.active a:hover:after {
         display: none;
     }
-
+    
     /* ** CONTENT ** */
-
+    
     section .content {
         margin-left: 0;
     }
-
+    
     section .content .title {
         font-size: 5em;
     }
-
+    
     section .content p {
         font-size: 2em;
     }
@@ -777,13 +792,13 @@ footer .block .love::first-letter {
     section.wall {
         padding: 100px 50px;
     }
-
+    
     /* ********* THE TEAM ** */
     section.team {
         height: 500px;
         padding: 100px 50px;
     }
-
+    
     section.team .block .bg {
         position: absolute;
         background: url(./img/patte_noBg.png) no-repeat center center;
@@ -801,12 +816,12 @@ footer .block .love::first-letter {
     section.contact form {
         grid-template-columns: 70% auto;
     }
-
+    
 }
 
 
 @media (max-width: 800px) {
-
+    
     section.wall .block .title,
     section.team .block .title,
     section.contact .block .title {
@@ -817,23 +832,23 @@ footer .block .love::first-letter {
     section.contact .block p {
         font-size: 1.6em;
     }
-
+    
     /* *** */
-
+    
     section.wall {
         padding: 50px 50px;
     }
-
+    
     section.wall .thumbnail {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(12, 300px);
     }
-
+    
     section.wall .thumbnail .thumb {
         width: 90%;
     }
     /* ** THE TEAM ** */
-  
+    
     div.card {
         width: 80%;
     }
@@ -844,7 +859,7 @@ footer .block .love::first-letter {
     .card .card-content {
         padding: 15px;
     }
-
+    
     /* **** */
     section.contact {
         padding: 880px 50px 50px;
@@ -855,12 +870,12 @@ footer .block .love::first-letter {
     .contactForm .inputBox textarea {
         height: 250px;
     }
-
+    
 }
 
 
 @media (max-width: 630px) {
-
+    
     section.wall .block .title,
     section.team .block .title,
     section.contact .block .title {
@@ -871,7 +886,7 @@ footer .block .love::first-letter {
     section.contact .block p {
         font-size: 1.5em;
     }
-
+    
     /* *** */
     header.sticky {
         grid-template-columns: 5% 55% 35% 5%;
@@ -879,52 +894,52 @@ footer .block .love::first-letter {
     header a.logo {
         font-size: 1.5em;
     }
-
+    
     .nav {
         grid-column: 1/5;
         height: 250px;
     }
-
+    
     .nav.active {
         grid-column: 1/5;
         height: 250px;
     }
-
+    
     .nav.active a:first-child {
         margin-top: 5%;
     }
-
+    
     .nav.active a {
         margin: 10px 0;
         font-size: 1.1em;
     }
-
+    
     .nav.active a:hover {
         font-size: 1.1em;
         letter-spacing: 0.1em;
         font-weight: 400;
     }
-
+    
     /* **** */
-
-
+    
+    
     section.header .content {
         margin-top: 500px;
     }
-
+    
     section.header .content h1 {
         font-size: 4em;
     }
-
+    
     section.header .content p {
         margin-top: 5px;
-
+        
     }
-
+    
     section.team .block h1 {
         font-size: 3em;
     }
-
+    
     /* **** */
     section.contact {
         padding: 1050px 50px 50px;
@@ -932,22 +947,22 @@ footer .block .love::first-letter {
     section.contact form .contactForm {
         padding: 25px 15px;
     }
-
+    
 }
 
 @media (max-width: 550px) {
-
+    
     header a.logo {
         font-size: 1.4em;
     }
-
+    
     section.contact {
         padding: 1120px 50px 50px;
     }
 } 
 
 @media (max-width: 500px) {
-
+    
     section.contact {
         padding: 1300px 50px 50px;
     }
@@ -955,122 +970,122 @@ footer .block .love::first-letter {
 
 
 @keyframes kit {
-
+    
     0%,
     100% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 0%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+    
     5% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 10%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+    
     10% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 20%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+    
     15% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 30%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+    
     20% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 40%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+    
     25% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 50%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+    
     30% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 60%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+    
     35% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 70%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+    
     40% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 80%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+    
     45% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 90%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+    
     50% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+    
     55% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 90%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+    
     60% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 80%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+    
     65% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 70%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+    
     70% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 60%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+    
     75% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 50%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+    
     80% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 40%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+    
     85% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 30%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+    
     90% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 20%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+    
     95% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 10%);
         -webkit-background-clip: text;
@@ -1082,9 +1097,9 @@ footer .block .love::first-letter {
     from {
         opacity: 0;
     }
-
+    
     to {
         opacity: 1;
     }
-
+    
 }

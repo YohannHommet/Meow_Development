@@ -4,125 +4,140 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <link rel="stylesheet" href="/Style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-    <title>Burger Menu</title>
+    
+    <title>Meow Development</title>
 </head>
 <body>
+    
+    <div id="container">
+        
+        <!-- ?HEADER -->
+        <header class="navbar" id="header">
+            <a href="#" class="logo">Meow Development<span style="margin-left: 10px;">&hearts;</span></a>
+            <div class="burgerToggle" onclick="toggleMenu()"></div>
+            <nav class="nav">
+                <a class="underline" href="#header" onclick="toggleMenu()">Accueil</a>
+                <a class="underline" href="#wall" onclick="toggleMenu()">The Wall</a>
+                <a class="underline" href="#team" onclick="toggleMenu()">The Meow Team</a>
+                <a class="underline" href="#contact" onclick="toggleMenu()">Contact</a>
+            </nav>
+        </header>
+        
+        
+        <!-- ?BANNER -->
+        <section id="banner">
+            
+            <div class="content">
+                <h1 class="title">Catisfaction </h1>
+                <p>Always Satisfied,</p>
+                <p>Meow Approved !</p>
+            </div>
+            
+        </section>
+        
+        
+        <!-- ?THE WALL -->
+        <section id="wall">
+            
+            <h2>The <span class="pink sub">W</span>all</h2>
+            
+            <div class="thumbnail"></div>
 
-    <header class="navbar" id="header">
-        <a href="#" class="logo">Meow Development<span style="margin-left: 10px;">&hearts;</span></a>
-        <div class="burgerToggle" onclick="toggleMenu()"></div>
-        <nav class="nav">
-            <a class="underline" href="#header" onclick="toggleMenu()">Accueil</a>
-            <a class="underline" href="#wall" onclick="toggleMenu()">The Wall</a>
-            <a class="underline" href="#team" onclick="toggleMenu()">The Meow Team</a>
-            <a class="underline" href="#contact" onclick="toggleMenu()">Contact</a>
-        </nav>
-    </header>
-
-
-    <section id="banner">
-
-        <div class="content">
-            <h1 class="title">Catisfaction </h1>
-            <p>Always Satisfied,</p>
-            <p>Meow Approved !</p>
-        </div>
-
-    </section>
-
-    <!-- ?THE WALL -->
-    <section id="wall">
-
-        <div class="block">
-            <h1 class="title">The <span class="pink">W</span>all</h1>
-        </div>
-        <div class="thumbnail"></div>
-        <div class="button-block">
-            <button type="button" class="button" onclick="newWall()">New Wall !</button>
-        </div>
-
-    </section>
-
-
-    <section class="team" id="team">
-
-        <div class="block">
-            <div class="bockDescription">
-                <h1 class="title">The Meow <span class="pink">T</span>eam</h1>
+            <div class="button-block">
+                <button type="button" class="button" onclick="newWall()">New Wall !</button>
+            </div>
+            
+        </section>
+        
+        
+        <!-- ?THE TEAM -->
+        <section id="team">
+            
+            <div class="block">
+                <div class="bockDescription">
+                    <h2>The Meow <span class="pink sub">T</span>eam</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora pariatur, laboriosam animi</p>
+                </div>
+                <div class="bg"></div>
+            </div>
+            
+            <div class="team">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="../img/team/sm_22.jpg" alt="">
+                    </div>
+                    <div class="card-content">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum velit quas tempora voluptatum atque culpa aut error. Repudiandae nostrum perferendis maiores delectus corrupti et ullam? Expedita eveniet perspiciatis quidem quibusdam.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, asperiores minus sed saepe praesentium aperiam.
+                        </p>
+                        <h3 class="name blue">Yohann</h3>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="../img/team/sm_17.jpg" alt="">
+                    </div>
+                    <div class="card-content">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum velit quas tempora voluptatum atque culpa aut error. Repudiandae nostrum perferendis maiores delectus corrupti et ullam? Expedita eveniet perspiciatis quidem quibusdam.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, asperiores minus sed saepe praesentium aperiam.
+                        </p>
+                        <h3 class="name pink">Justine</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- ?CONTACT -->
+        <section class="contact">
+            
+            <div class="block" id="contact">
+                <h2 class="title">Send us a <span class="pink sub">M</span>eow !</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora pariatur, laboriosam animi</p>
             </div>
-            <div class="bg"></div>
-        </div>
-
-        <div class="team">
-            <div class="card">
-                <div class="imgBx">
-                    <img src="./img/team/sm_22.jpg" alt="">
+            
+            <form action="">
+                <div class="contactForm">
+                    <div class="inputBox">
+                        <input type="text" name="name" id="name" placeholder="Name">
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" name="email" id="email" placeholder="Email">
+                    </div>
+                    <div class="inputBox">
+                        <textarea name="message" id="mesage" placeholder="Meow Message !"></textarea>
+                    </div>
+                    <div class="inputBox" style="margin-bottom: 0;">
+                        <button type="submit">Send</button>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum velit quas tempora voluptatum atque culpa aut error. Repudiandae nostrum perferendis maiores delectus corrupti et ullam? Expedita eveniet perspiciatis quidem quibusdam.
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, asperiores minus sed saepe praesentium aperiam.
-                    </p>
-                    <h3 class="name blue">Yohann</h3>
-                </div>
+            </form>
+            
+        </section>
+        
+        
+        <!-- ?FOOTER -->
+        <footer class="footer">
+            
+            <div class="block">
+                <h3>Meow Development Agency</h3>
+                <p><span class="blue">Y</span>ohann & <span class="pink">J</span>ustine</p>
+                <p class="love">Made with <span style="text-decoration: line-through;">Cats</span> Love, Copyright &copy; 2021 </p>
             </div>
-
-            <div class="card">
-                <div class="imgBx">
-                    <img src="./img/team/sm_17.jpg" alt="">
-                </div>
-                <div class="card-content">
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum velit quas tempora voluptatum atque culpa aut error. Repudiandae nostrum perferendis maiores delectus corrupti et ullam? Expedita eveniet perspiciatis quidem quibusdam.
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, asperiores minus sed saepe praesentium aperiam.
-                    </p>
-                    <h3 class="name pink">Justine</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact">
-
-        <div class="block" id="contact">
-            <h1 class="title">Send us a <span class="pink">M</span>eow !</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora pariatur, laboriosam animi</p>
-        </div>
-
-        <form action="">
-            <div class="contactForm">
-                <div class="inputBox">
-                    <input type="text" name="name" id="name" placeholder="Name">
-                </div>
-                <div class="inputBox">
-                    <input type="email" name="email" id="email" placeholder="Email">
-                </div>
-                <div class="inputBox">
-                    <textarea name="message" id="mesage" placeholder="Meow Message !"></textarea>
-                </div>
-                <div class="inputBox" style="margin-bottom: 0;">
-                    <button type="submit">Send</button>
-                </div>
-            </div>
-        </form>
-
-    </section>
-
-    <footer class="footer">
-
-        <div class="block">
-            <h3>Meow Development Agency</h3>
-            <p><span class="blue">Y</span>ohann & <span class="pink">J</span>ustine</p>
-            <p class="love">Made with <span style="text-decoration: line-through;">Cats</span> Love, Copyright &copy; 2021 </p>
-        </div>
-
-    </footer>
-
-
+            
+        </footer>
+        
+    </div>
+    
+    
+    
+    <!-- ?SCRIPT -->
     <script type="text/javascript" src="App/app.js"></script>
     <script type="text/javascript" src="App/vanilla-tilt.min.js"></script>
     <script>
@@ -141,6 +156,5 @@
             perspective: 800,
         });
     </script>
-
 </body>
 </html>
