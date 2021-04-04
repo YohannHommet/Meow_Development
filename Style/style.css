@@ -2,7 +2,7 @@
 
 root {
     --primary: #52f1ff;
-    --secondary: #ff0979;
+    --secondary: #ff0073;
     --black: #050505;
     --grey: #313131;
 }
@@ -133,7 +133,7 @@ section {
 
 section .content {
     grid-column: 2/4;
-    margin-top: 500px;
+    margin-top: 300px;
     margin-left: 100px;
 
 }
