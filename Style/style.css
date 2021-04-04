@@ -13,6 +13,7 @@ root {
     box-sizing: border-box;
     font-family: "Oswald", sans-serif;
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 p::first-letter {
@@ -21,7 +22,7 @@ p::first-letter {
 
 /* ************************ NAVBAR ****************************** */
 
-header {
+#header {
     position: fixed;
     top: 0;
     left: 0;
@@ -39,13 +40,13 @@ header {
     z-index: 100;
 }
 
-header.sticky {
+#header.sticky {
     background-color: rgb(5, 5, 5, 1);
     grid-template-rows: 70px;
     height: 70px;
 }
 
-header a.logo {
+#header a.logo {
     grid-column: 2/3;
     align-self: center;
 
@@ -57,18 +58,18 @@ header a.logo {
     text-decoration: none;
 }
 
-header a.logo:hover {
+#header a.logo:hover {
     animation: kit 1.5s ease infinite alternate;
 }
 
-header nav {
+#header nav {
     display: flex;
     justify-content: space-evenly;
 
     grid-column: 3/4;
 }
 
-header nav a {
+#header nav a {
     color: #fff;
     text-decoration: none;
     display: flex;
@@ -82,13 +83,13 @@ header nav a {
     letter-spacing: 0.1em;
 }
 
-header nav a:hover {
+#header nav a:hover {
     color: rgb(0, 234, 255);
     font-size: 1em;
     font-weight: 400;
 }
 
-header nav a:after {
+#header nav a:after {
     content: "";
     position: absolute;
     height: 2px;
@@ -102,7 +103,7 @@ header nav a:after {
     transform: scale(0);
 }
 
-header nav a:hover:after {
+#header nav a:hover:after {
     transform: scale(1);
 }
 
@@ -116,41 +117,39 @@ header nav a:hover:after {
 
 
 
-section.header {
-    background-image: url(./img/bg_chat.jpg);
+section {
+    padding: 100px;
+}
+
+#banner {
+    background-image: url(../img/bg_chat.jpg);
     background-size: cover;
     background-position: center center;
 
     height: 100vh;
     display: grid;
-    grid-template-columns: 5% 1fr 1fr 5%;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: calc(100vh - 70px);
 }
 
-section {
-    padding: 100px 0;
+#banner .content {
+    margin-top: 10rem;
+    margin-left: 3rem;
 }
 
-section .content {
-    grid-column: 2/4;
-    margin-top: 300px;
-    margin-left: 100px;
-
-}
-
-section.header .title {
+#banner .content .title {
     color: #fff;
-    font-size: 6em;
-    letter-spacing: 0.1em;
+    font-size: 6rem;
+    letter-spacing: 0.15rem;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgb(255, 255, 255);
 }
 
-section .content p {
+#banner .content p {
     color: rgb(195, 195, 195);
-    margin-top: 20px;
-    font-size: 2.5em;
+    margin-top: 1,2rem;
+    font-size: 2.5rem;
     font-weight: 300;
 }
 
@@ -160,29 +159,27 @@ section .content p {
 
 
 
-section.wall {
+#wall {
     background-color: #050505;
-    padding: 150px 150px;
     display: grid;
 
 }
 
-section.wall .title {
+#wall .block .title {
     color: #fff;
     text-align: center;
     margin-bottom: 50px;
-    font-size: 5.5em;
+    font-size: 5.5rem;
 }
 
-section.wall .thumbnail {
+#wall .thumbnail {
     display: grid;
-    grid-template-columns: 350px 350px 350px;
-    grid-template-rows: 300px 350px 350px 350px;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(4, 350px);
     margin: auto;
-
 }
 
-section.wall .thumbnail .thumb {
+#wall .thumbnail .thumb {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -195,23 +192,23 @@ section.wall .thumbnail .thumb {
     animation: pop 1.8s ease-in-out normal;
 }
 
-section.wall .thumbnail .thumb:hover {
+#wall .thumbnail .thumb:hover {
     filter: opacity(1);
     filter: scale(1.08)
 }
 
 
-section.wall .button-block {
+#wall .button-block {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 100px;
 }
 
-section.wall .button-block .button {
+#wall .button-block .button {
     background: rgb(5, 5, 5);
     color: white;
-    font-size: 2em;
+    font-size: 2rem;
     border: 1px solid white;
     padding: 5px 65px 7px;
     position: relative;
@@ -220,8 +217,7 @@ section.wall .button-block .button {
     transition: 0.3s ease-in-out;
     z-index: 2;
 }
-
-section.wall .button-block .button:hover {
+#wall .button-block .button:hover {
     color: rgba(5, 5, 5);
     transform: translateZ(20px);
     text-shadow: -3px 3px 4px rgba(5, 5, 5, 0.5);
@@ -231,11 +227,11 @@ section.wall .button-block .button:hover {
     transition: color 0.8s ease-in-out;
 }
 
-section.wall .button-block .button::before {
+#wall .button-block .button::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 0px;
+    left: 0;
     height: 100%;
     width: 0;
     background: #52f1ff;
@@ -243,10 +239,9 @@ section.wall .button-block .button::before {
     z-index: -1;
 }
 
-section.wall .button-block .button:hover::before {
+#wall .button-block .button:hover::before {
     width: 100%;
     left: 0;
-
 }
 
 
