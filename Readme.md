@@ -1,5 +1,5 @@
 # Meow Development, a fake web Agency with Cats !
-#### Made by ***Yohann Hommet***
+### Made by ***Yohann Hommet***
 
 
 Voici un site One Page que j'ai fait pour m'amuser et m'exercer.  
