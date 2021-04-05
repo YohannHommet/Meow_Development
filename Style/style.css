@@ -66,7 +66,7 @@ p::first-letter {
     backdrop-filter: blur(10px);
     
     transition: all 0.35s linear;
-    z-index: 100;
+    z-index: 300;
 }
 
 #header.sticky {
@@ -552,26 +552,61 @@ p::first-letter {
         margin: auto;
     }
     
+    /* **** */
+    #contact {
+        padding: 100px 100px;
+    }
+}
 
-    div.card {
-        margin: 0 auto 40px;
+
+/* ************************* */
+
+
+@media (max-width: 1400px) {
+    #container {
+        width: 1200px;
     }
     
-    /* **** */
-    section.contact {
-        padding: 1000px 100px 50px;
+    section#banner,
+    section#wall,
+    section#team {
+        padding: 50px;
     }
     
-    /* **** */
-    section.contact form {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        background-size: contain;
-        margin-top: 50px;
+    #contact {
+        padding: 50px 50px;
     }
     
-    section.contact form {
-        grid-template-columns: 60% auto;
+    h2 {
+        font-size: 4.5em;
+    }
+    
+    #wall h2 {
+        margin-right: 0;
+    }
+    
+    #team .block .blockDescription p,
+    #contact .block p {
+        font-size: 1.6rem;
+    }
+}
+
+
+/* ************************* */
+
+
+@media (max-width: 1200px) {
+    #container {
+        width: 1000px;
+    }
+    
+    #wall .thumbnail {
+        grid-template-columns: repeat(2, 350px);
+        grid-template-rows: repeat(6, 350px);
+    }
+    
+    #team div.team {
+        justify-content: space-between;
     }
     
 }
@@ -581,25 +616,15 @@ p::first-letter {
 
 
 @media (max-width: 1000px) {
-    
-    section.wall .block .title,
-    section.team .block .title,
-    section.contact .block .title {
-        font-size: 4.5em;
+        
+    #container {
+        width: 900px;
     }
-    section.wall .block p,
-    section.team .block p,
-    section.contact .block p {
-        font-size: 1.6em;
-    }
-    
-    /* *** */
-    
-    header nav {
+    #header nav {
         display: none;
     }
     
-    .burgerToggle {
+    #header .burgerToggle {
         display: block;
         position: relative;
         width: 40px;
@@ -615,11 +640,11 @@ p::first-letter {
         margin-left: auto;
     }
     
-    .burgerToggle:hover {
+    #header .burgerToggle:hover {
         filter: opacity(0.8);
     }
     
-    .burgerToggle.active {
+    #header .burgerToggle.active {
         display: block;
         position: relative;
         background: url(img/close.png);
