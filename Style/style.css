@@ -751,7 +751,7 @@ p::first-letter {
     
     #team .team .card {
         margin: 0 auto;
-        width: 80%;
+        width: 60%;
         margin-bottom: 2rem;
     }
     
@@ -827,11 +827,7 @@ p::first-letter {
     
     /*  */
     #footer .block h3 {
-        color: rgb(230, 230, 230);
         font-size: 1.4rem;
-        text-align: center;
-        font-weight: 300;
-        animation: kit 2.5s ease infinite alternate;
     }
     
     #footer .block p {
@@ -887,6 +883,7 @@ p::first-letter {
     
     #wall .thumbnail {
         grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, 250px);
     }
     
     #wall .thumbnail .thumb {
@@ -899,8 +896,19 @@ p::first-letter {
     }
     
     /*  */
+    #team .team .card {
+        width: 70%;
+    }
     #team div.team {
         margin-top: -28rem;
+    }
+    
+    /*  */
+    #contact form button {
+        margin-top: 1rem;
+        font-size: 1.3em;
+        border: 1px solid white;
+        padding: 2px 35px 5px;
     }
     
     /*  */
@@ -908,13 +916,34 @@ p::first-letter {
         padding-top: 3rem;
         margin-top: 2rem;
     }
-    
-    #contact form button {
-        margin-top: 1rem;
-        font-size: 1.3em;
-        border: 1px solid white;
-        padding: 2px 35px 5px;
+}
+
+
+@media (max-width: 550px) {
+    #team div.team {
+        margin-top: -26rem;
     }
+    
+    #team .team .card {
+        width: 100%;
+    }
+    
+    #team .card .card-content {
+        padding: 1rem;
+    }
+    
+    /*  */
+    #footer .block h3 {
+        font-size: 1.2rem;
+    }
+    
+    #footer .block p {
+        font-size: 1.2rem;
+    }
+    #footer .block .love {
+        font-size: 0.9rem;
+    }
+    
 }
 
 
