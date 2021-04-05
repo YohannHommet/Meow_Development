@@ -20,12 +20,15 @@ body {
     background-color: var(--black);
 }
 
-#container {
-    width: 1600px;
+div.container {
+    max-width: 1600px;
     margin: 0 auto;
 }
 
-section {
+section#banner,
+section#wall,
+section#team, 
+section#contact {
     padding: 100px;
 }
 
@@ -97,8 +100,8 @@ p::first-letter {
 }
 
 #header nav a {
-    position: relative;
     align-self: center;
+    margin-left: 80px;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
@@ -145,14 +148,22 @@ p::first-letter {
 
 
 #banner {
+    position: relative;
     background-image: url(../img/bg_chat.jpg);
     background-size: cover;
     background-position: center center;
     
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 100vw;
+    width: 100vw;
     height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: calc(100vh - 70px);
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 #banner .content {
@@ -531,8 +542,8 @@ p::first-letter {
 
 
 @media (max-width: 1600px) {
-    #container {
-        width: 1400px;
+    div.container {
+        max-width: 1400px;
     }
     
     h2 {
@@ -550,7 +561,6 @@ p::first-letter {
         margin: auto;
     }
     
-    /* **** */
     #contact {
         padding: 100px 100px;
     }
@@ -561,8 +571,8 @@ p::first-letter {
 
 
 @media (max-width: 1400px) {
-    #container {
-        width: 1200px;
+    div.container {
+        max-width: 1200px;
     }
     
     section#banner,
@@ -571,7 +581,7 @@ p::first-letter {
     section#contact {
         padding: 50px;
     }
-        
+    
     h2 {
         font-size: 4.5em;
     }
@@ -591,8 +601,12 @@ p::first-letter {
 
 
 @media (max-width: 1200px) {
-    #container {
-        width: 1000px;
+    div.container {
+        max-width: 1000px;
+    }
+    
+    #header nav a {
+        margin-left: 60px;
     }
     
     #wall .thumbnail {
@@ -611,14 +625,18 @@ p::first-letter {
 
 
 @media (max-width: 1000px) {
-        
-    #container {
-        width: 800px;
+    
+    div.container {
+        max-width: 800px;
     }
-
+    
+    #team .block .blockDescription p,
+    #contact .block p {
+        font-size: 1.5rem;
+    }
+    
     #header {
         grid-template-columns: 5% 1fr 1fr 5%;
-        grid-template-rows: 70px;
         transition: 0.4s;
     }
     #header nav {
@@ -631,8 +649,7 @@ p::first-letter {
         width: 40px;
         height: 40px;
         grid-column: 3/4;
-
-
+        
         background-image: url(../img/menu.png);
         background-size: 30px;
         background-repeat: no-repeat;
@@ -702,6 +719,7 @@ p::first-letter {
     }
     
     #header .nav.active a {
+        margin-left: 0;
         margin-bottom: 2.5rem;
         font-size: 1.2em;
     }
@@ -716,28 +734,33 @@ p::first-letter {
         display: none;
     }
     
-    
-    /* ********* THE TEAM ** */
-    section.team {
-        height: 500px;
-        padding: 100px 50px;
+    /*  */
+    #banner .content .title {
+        font-size: 5rem;
     }
     
-    section.team .block .bg {
-        position: absolute;
-        background: url(./img/patte_noBg.png) no-repeat center center;
-        top: 45px;
-        right: 0;
-        width: 400px;
-        height: 400px;
-        background-size: 500px;
+    #banner .content p {
+        margin-left: 1rem;
+        font-size: 2.3rem;
     }
     
-    /* **** */
-    section.contact {
-        padding: 1100px 50px 50px;
+    /*  */
+    #team div.team {
+        display: block;
     }
-    section.contact form {
+    
+    #team .team .card {
+        margin: 0 auto;
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+    
+    /*  */
+    #contact {
+        padding: 0 50px;
+    }
+    
+    #contact form {
         grid-template-columns: 70% auto;
     }
     
@@ -746,151 +769,153 @@ p::first-letter {
 
 @media (max-width: 800px) {
     
-    section.wall .block .title,
-    section.team .block .title,
-    section.contact .block .title {
-        font-size: 4em;
+    div.container {
+        max-width: 700px;
+        margin: 0 auto;
     }
-    section.wall .block p,
-    section.team .block p,
-    section.contact .block p {
-        font-size: 1.6em;
+    
+    section#banner,
+    section#wall,
+    section#team, 
+    section#contact {
+        padding: 25px;
+    }
+    
+    h2 {
+        color: #fff;
+        font-size: 3rem;
+    }
+    
+    #team .block .blockDescription p,
+    #contact .block p {
+        font-size: 1.3rem;
+    }
+    
+    .sub {
+        font-size: 3.5rem;
     }
     
     /* *** */
-    
-    section.wall {
-        padding: 50px 50px;
+    #wall .thumbnail {
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: repeat(6, 300px);
     }
     
-    section.wall .thumbnail {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(12, 300px);
-    }
-    
-    section.wall .thumbnail .thumb {
-        width: 90%;
-    }
     /* ** THE TEAM ** */
+    #team div.team {
+        margin-top: -22rem;
+    }
     
-    div.card {
+    #team .block .bg {
+        top: 0;
+        right: 2rem;
+    }
+    
+    /* **** */
+    #contact .block {
+        margin-bottom: 50px;
+    }
+    
+    #contact form {
+        grid-template-columns: auto;
+    }
+    
+    #contact .inputBox.center {
+        display: flex;
+        justify-content: center;
+    }
+    
+    /*  */
+    #footer .block h3 {
+        color: rgb(230, 230, 230);
+        font-size: 1.4rem;
+        text-align: center;
+        font-weight: 300;
+        animation: kit 2.5s ease infinite alternate;
+    }
+    
+    #footer .block p {
+        font-size: 1.4rem;
+    }
+    #footer .block .love {
+        font-size: 1.1em;
+    }
+}
+
+
+@media (max-width: 650px) {
+    
+    div.container {
+        max-width: 650px;
+        margin: 0 auto;
+    }
+    
+    section#banner,
+    section#wall,
+    section#team, 
+    section#contact {
+        padding: 1rem;
+    }
+    
+    h2 {
+        color: #fff;
+        font-size: 2.5rem;
+    }
+    
+    #team .block .blockDescription p,
+    #contact .block p {
+        font-size: 1.2rem;
+    }
+    
+    .sub {
+        font-size: 2.5rem;
+    }
+    
+    /*  */
+    #banner .content .title {
+        font-size: 3.5rem;
+    }
+    
+    #banner .content p {
+        font-size: 2rem;
+    }
+    
+    /* *** */
+    #wall h2 {
+        margin-bottom: 25px;
+    }
+    
+    #wall .thumbnail {
+        grid-template-columns: 1fr;
+    }
+    
+    #wall .thumbnail .thumb {
         width: 80%;
     }
-    .card .imgBx {
-        width: 97%;
-        height: 250px;
-    }
-    .card .card-content {
-        padding: 15px;
+    
+    #wall .button-block .button {
+        font-size: 1.3rem;
+        padding: 5px 45px 7px;
     }
     
-    /* **** */
-    section.contact {
-        padding: 880px 50px 50px;
-    }
-    section.contact form {
-        grid-template-columns: 100% auto;
-    }
-    .contactForm .inputBox textarea {
-        height: 250px;
+    /*  */
+    #team div.team {
+        margin-top: -28rem;
     }
     
+    /*  */
+    #footer {
+        padding-top: 3rem;
+        margin-top: 2rem;
+    }
+    
+    #contact form button {
+        margin-top: 1rem;
+        font-size: 1.3em;
+        border: 1px solid white;
+        padding: 2px 35px 5px;
+    }
 }
-
-
-@media (max-width: 630px) {
-    
-    section.wall .block .title,
-    section.team .block .title,
-    section.contact .block .title {
-        font-size: 3em;
-    }
-    section.wall .block p,
-    section.team .block p,
-    section.contact .block p {
-        font-size: 1.5em;
-    }
-    
-    /* *** */
-    header.sticky {
-        grid-template-columns: 5% 55% 35% 5%;
-    }
-    header a.logo {
-        font-size: 1.5em;
-    }
-    
-    .nav {
-        grid-column: 1/5;
-        height: 250px;
-    }
-    
-    .nav.active {
-        grid-column: 1/5;
-        height: 250px;
-    }
-    
-    .nav.active a:first-child {
-        margin-top: 5%;
-    }
-    
-    .nav.active a {
-        margin: 10px 0;
-        font-size: 1.1em;
-    }
-    
-    .nav.active a:hover {
-        font-size: 1.1em;
-        letter-spacing: 0.1em;
-        font-weight: 400;
-    }
-    
-    /* **** */
-    
-    
-    section.header .content {
-        margin-top: 500px;
-    }
-    
-    section.header .content h1 {
-        font-size: 4em;
-    }
-    
-    section.header .content p {
-        margin-top: 5px;
-        
-    }
-    
-    section.team .block h1 {
-        font-size: 3em;
-    }
-    
-    /* **** */
-    section.contact {
-        padding: 1050px 50px 50px;
-    }
-    section.contact form .contactForm {
-        padding: 25px 15px;
-    }
-    
-}
-
-@media (max-width: 550px) {
-    
-    header a.logo {
-        font-size: 1.4em;
-    }
-    
-    section.contact {
-        padding: 1120px 50px 50px;
-    }
-} 
-
-@media (max-width: 500px) {
-    
-    section.contact {
-        padding: 1300px 50px 50px;
-    }
-} 
 
 
 @keyframes kit {
