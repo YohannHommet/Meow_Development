@@ -55,12 +55,10 @@ p::first-letter {
     left: 0;
     
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 5% 35% 55% 5%;
     grid-template-rows: 100px;
     height: 100px;
     width: 100%;
-    padding: 0 100px;
-    margin: auto;
     
     background-color: rgb(5, 5, 5, 0.7);
     backdrop-filter: blur(10px);
@@ -76,7 +74,7 @@ p::first-letter {
 }
 
 #header a.logo {
-    grid-column: 1/2;
+    grid-column: 2/3;
     align-self: center;
     
     font-size: 1.6rem;
@@ -95,7 +93,7 @@ p::first-letter {
 #header nav {
     display: flex;
     justify-content: space-evenly;
-    grid-column: 2/3;
+    grid-column: 3/4;
 }
 
 #header nav a {
@@ -569,14 +567,11 @@ p::first-letter {
     
     section#banner,
     section#wall,
-    section#team {
+    section#team, 
+    section#contact {
         padding: 50px;
     }
-    
-    #contact {
-        padding: 50px 50px;
-    }
-    
+        
     h2 {
         font-size: 4.5em;
     }
@@ -618,7 +613,13 @@ p::first-letter {
 @media (max-width: 1000px) {
         
     #container {
-        width: 900px;
+        width: 800px;
+    }
+
+    #header {
+        grid-template-columns: 5% 1fr 1fr 5%;
+        grid-template-rows: 70px;
+        transition: 0.4s;
     }
     #header nav {
         display: none;
@@ -629,7 +630,10 @@ p::first-letter {
         position: relative;
         width: 40px;
         height: 40px;
-        background: url(img/menu.png);
+        grid-column: 3/4;
+
+
+        background-image: url(../img/menu.png);
         background-size: 30px;
         background-repeat: no-repeat;
         background-position: center;
@@ -638,6 +642,7 @@ p::first-letter {
         transition: 0.2s linear;
         margin: auto 0;
         margin-left: auto;
+        z-index: 300;
     }
     
     #header .burgerToggle:hover {
@@ -647,7 +652,7 @@ p::first-letter {
     #header .burgerToggle.active {
         display: block;
         position: relative;
-        background: url(img/close.png);
+        background: url(../img/close.png);
         background-size: 20px;
         background-repeat: no-repeat;
         background-position: center;
@@ -659,7 +664,7 @@ p::first-letter {
         transition: all 0.4s ease-in-out;
     }
     
-    .burgerToggle.active:hover {
+    #header .burgerToggle.active:hover {
         transform: rotate(180deg);
         background-size: 18px;
         filter: opacity(0.8);
@@ -667,33 +672,25 @@ p::first-letter {
     }
     
     /* *** The Nav outside the screen before we call it */
-    .nav {
-        display: block;
-        justify-content: center;
-        position: relative;
+    #header .nav {
         grid-column: 3/5;
-        grid-row: 2/3;
-        height: 100vh;
-        
         opacity: 0;
         
         transform: translateY(-1500px);
-        /* transform: translateX(500px); */
-        transition: all 0.7s linear;
+        transition: all 0.4s;
         transform-origin: top;
     }
     
-    .nav a {
-        justify-content: center;
-        margin: 20px 0;
+    #header .nav a {
         font-size: 1.2em;
     }
     
-    .nav.active {
-        display: block;
+    #header .nav.active {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
         grid-column: 3/5;
-        grid-row: 2/3;
         height: 100vh;
         
         background: rgba(5, 5, 5, 0.7);
@@ -701,48 +698,24 @@ p::first-letter {
         
         opacity: 1;
         transform: translateY(0);
-        transition: all 0.6s linear;
+        transition: all 0.4s;
     }
     
-    .nav.active a {
-        justify-content: center;
-        margin: 20px 0;
+    #header .nav.active a {
+        margin-bottom: 2.5rem;
         font-size: 1.2em;
     }
     
-    .nav.active a:hover {
+    #header .nav.active a:hover {
         font-size: 1.3em;
         letter-spacing: 0.2em;
         font-weight: 400;
     }
     
-    .nav.active a:first-child,
-    .nav a:first-child {
-        margin-top: 50%;
-    }
-    
-    .nav.active a:hover:after {
+    #header .nav.active a:hover:after {
         display: none;
     }
     
-    /* ** CONTENT ** */
-    
-    section .content {
-        margin-left: 0;
-    }
-    
-    section .content .title {
-        font-size: 5em;
-    }
-    
-    section .content p {
-        font-size: 2em;
-    }
-    
-    /* ********* THE WALL  ** */
-    section.wall {
-        padding: 100px 50px;
-    }
     
     /* ********* THE TEAM ** */
     section.team {
