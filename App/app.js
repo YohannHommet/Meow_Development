@@ -13,6 +13,7 @@ function toggleMenu() {
   nav.classList.toggle("active");
 }
 
+
 const img = [
   1,
   2,
@@ -57,13 +58,13 @@ const img = [
   41,
 ];
 
+
 displayedImg = [];
 const thumbnail = document.querySelector(".thumbnail");
 
 
 function createThumbnail() {
 
-  const test = document.createElement("IMG");
   var numbers = []; // new empty array  
   var n, p;
 
@@ -85,9 +86,9 @@ function createThumbnail() {
   VanillaTilt.init(document.querySelectorAll(".thumb"), {
     max: 25,
     speed: 400,
-    glare: true, 
+    glare: true,
     "max-glare": 0.8,
-    axis: 'x',
+    axis: "x",
   });
 
 } createThumbnail();

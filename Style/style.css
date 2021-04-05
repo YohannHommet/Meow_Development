@@ -310,7 +310,7 @@ p::first-letter {
     position: absolute;
     background: url(../img/patte_noBg.png) no-repeat center center;
     background-size: auto;
-    top: 3rem;
+    top: 1rem;
     right: 15rem;
     width: 500px;
     height: 500px;
@@ -324,7 +324,7 @@ p::first-letter {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: -15rem;
+    margin-top: -18rem;
     z-index: 200;
     position: relative;
 }
@@ -347,7 +347,7 @@ p::first-letter {
     height: 300px;
     position: relative;
     margin: 10px auto;
-    transform: translateZ(10px);
+    transform: translateZ(15px);
 }
 
 #team .card .imgBx img {
@@ -359,37 +359,30 @@ p::first-letter {
     object-fit: cover;
     transition: all 0.4s ease;
     border-radius: 10px;
+    transform: translateZ(15px);
 }
 
 
 #team .card .card-content {
-    display: block;
     padding: 30px 20px;
-    transform: translateZ(20px);
-    
-    transition: all 0.4s ease;
-}
-
-#team .card .card-content p {
-    color: #fff;
-    text-align: center;
-    letter-spacing: 1px;
-    padding: 0 10px;
     transform: translateZ(30px);
-    
 }
 
 #team .card .card-content p,
-h3 {
-    color: #fff;
+#team .card .card-content h3 {
     text-align: center;
-    transform: translateZ(30px);
 }
 
 #team .card .card-content h3 {
     margin-top: 20px;
     font-size: 2em;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.1rem;
+}
+
+#team .card .card-content p {
+    color: #fff;
+    letter-spacing: 0.05rem;
+    padding: 0 10px;
 }
 
 
@@ -400,68 +393,56 @@ h3 {
 
 
 
-section.contact {
-    background: rgb(5, 5, 5);
-    padding: 500px 150px 100px;
+
+#contact .block {
+    margin-bottom: 100px;
 }
-section.contact .block {
-    padding-top: 100px;
-}
-section.contact .block .title {
-    color: #fff;
+
+#contact .block .title {
     text-align: start;
-    font-size: 5.5em;
 }
-section .block p {
+
+#contact .block p {
     text-align: start;
     color: rgb(195, 195, 195);
     margin-top: 20px;
     font-size: 1.8em;
     font-weight: 300;
 }
-section.contact form {
-    
+
+#contact form {
     display: grid;
     grid-template-columns: 60% 40%;
     grid-template-rows: 1fr;
-    position: relative;
-    background: linear-gradient(180deg, rgba(5,5,5,1) 5%, rgba(255,255,255,0) 35%, rgba(255,255,255,0) 65%, rgba(5,5,5,1) 95%), url(./img/bg_contact-dark.jpg) no-repeat center center;
-    
+    background: linear-gradient(180deg, rgba(5,5,5,1) 5%, rgba(255,255,255,0) 35%, rgba(255,255,255,0) 65%, rgba(5,5,5,1) 95%), url(../img/bg_contact-dark.jpg) no-repeat center center;
     background-size: cover;
-    margin-top: 100px;
 }
-section.contact form .contactForm {
-    padding: 50px 50px;
-    width: 100%;
-    margin: auto;
-    
-    background: rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur( 4px );
-    
+#contact form .contactForm {
+    background: rgba(0, 0, 0, 0.1);
     box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.4);
+    /* backdrop-filter: blur(4px); */
+    /* -webkit-backdrop-filter: blur(4px); */
 }
-.contactForm .inputBox {
-    position: relative;
-    width: 100%;
+
+#contact .contactForm .inputBox {
     margin-bottom: 20px;
 }
-.contactForm .inputBox input,
-.contactForm .inputBox textarea {
+
+#contact .contactForm .inputBox input,
+#contact .contactForm .inputBox textarea {
     width: 100%;
     border: 1px solid #555;
     background-color: transparent;
     padding: 10px;
     color: #fff;
     outline: none;
-    font-size: 16px;
     font-weight: 300;
     resize: none;
 }
 .contactForm .inputBox textarea {
     height: 300px;
 }
-section.contact form button {
+#contact form button {
     background: rgb(5, 5, 5);
     margin-top: 20px;
     color: white;
@@ -474,7 +455,8 @@ section.contact form button {
     transition: 0.3s ease-in-out;
     z-index: 2;
 }
-section.contact form button:hover {
+
+#contact form button:hover {
     color: rgba(5, 5, 5);
     transform: translateZ(20px);
     text-shadow: -3px 3px 4px rgba(5, 5, 5, 0.5);
@@ -483,7 +465,8 @@ section.contact form button:hover {
     
     transition: color 0.8s ease-in-out;
 }
-section.contact form button::before {
+
+#contact form button::before {
     content: "";
     position: absolute;
     top: 0;
@@ -494,7 +477,8 @@ section.contact form button::before {
     transition: width 0.5s ease;
     z-index: -1;
 }
-section.contact form button:hover::before {
+
+#contact form button:hover::before {
     width: 100%;
     left: 0;
 }
@@ -505,38 +489,36 @@ section.contact form button:hover::before {
 
 
 
-footer {
+#footer {
     background: #050505;
     border-top: 1px solid #313131;
-    padding: 100px 100px
+    padding: 100px;
 }
-footer .block h3 {
+
+#footer .block h3 {
     color: rgb(230, 230, 230);
-    font-size: 1.6em;
+    font-size: 1.6rem;
     text-align: center;
     font-weight: 300;
+    animation: kit 2.5s ease infinite alternate;
 }
 
-
-footer .block p {
+#footer .block p {
     color: rgb(195, 195, 195);
-    font-size: 1.4em;
+    font-size: 1.4rem;
     text-align: center;
 }
-footer .block .love {
+
+#footer .block .love {
     color: rgb(151, 151, 151);
     align-items: center;
     font-size: 1.3em;
-    margin-top: 80px;
-    
+    margin-top: 80px;   
 }
-footer .block .love::first-letter {
+
+#footer .block .love::first-letter {
     color: rgb(151, 151, 151);
-    
-    
 }
-
-
 
 
 
@@ -548,88 +530,29 @@ footer .block .love::first-letter {
 
 
 
-@media (min-width: 2400px) {
-    section.wall .thumbnail {
-        grid-template-columns: repeat(6, 350px);
-        grid-template-rows: repeat(2, 350px);
-    }
-    section.team div.team {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 100px;
-    }
-    section.team div.team .card {
-        margin-right: 10%;
-        margin-left: 10%;
-        width: 500px;
-    }
-    
-    section.contact form {
-        grid-template-columns: 40% auto;
-    }
-}
-@media (max-width: 2399px) {
-    section.wall .thumbnail {
-        grid-template-columns: repeat(4, 350px);
-        grid-template-rows: repeat(3, 350px);
-    }
-    section.contact form {
-        grid-template-columns: 50% auto;
-    }
-    
-}
-@media (max-width: 1800px) {
-    section.wall .thumbnail {
-        grid-template-columns: repeat(3, 350px);
-        grid-template-rows: repeat(4, 350px);
-    }
-    section.contact form {
-        grid-template-columns: 60% auto;
-    }
-    
-}
-@media (max-width: 1350px) {
-    
-    section.wall {
-        padding: 100px 100px;
-    }
-    section.wall .thumbnail {
-        grid-template-columns: repeat(2, 350px);
-        grid-template-rows: repeat(6, 350px);
-    }
-    
-}
 
-/* ************************** */
 
-@media (max-width: 1150px) {
+@media (max-width: 1600px) {
+    #container {
+        width: 1400px;
+    }
     
-    section.wall .block .title,
-    section.team .block .title,
-    section.contact .block .title {
+    h2 {
         font-size: 5em;
     }
-    section.wall .block p,
-    section.team .block p,
-    section.contact .block p {
-        font-size: 1.6em;
+    
+    #wall h2 {
+        margin-right: 50px;
     }
     
-    /* *** */
-    section.wall .thumbnail {
-        grid-template-columns: repeat(2, 350px);
-        grid-template-rows: repeat(6, 350px);
+    #wall .thumbnail {
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(4, 350px);
+        margin: auto;
     }
     
-    /* **** */
-    section.team {
-        padding: 100px 100px;
-    }
-    section.team div.team {
-        display: block;
-        padding-top: 30px;
-    }
+
     div.card {
         margin: 0 auto 40px;
     }
