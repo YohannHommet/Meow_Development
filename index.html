@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="/Style/style.css">
+    <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     
     <title>Meow Development</title>
@@ -17,7 +17,9 @@
     <!-- ?HEADER -->
     <header class="navbar" id="header">
         <a href="#" class="logo">Meow Development<span style="margin-left: 10px;">&hearts;</span></a>
+
         <div class="burgerToggle" onclick="toggleMenu()"></div>
+
         <nav class="nav">
             <a class="underline" href="#header" onclick="toggleMenu()">Accueil</a>
             <a class="underline" href="#wall" onclick="toggleMenu()">The Wall</a>
@@ -26,7 +28,6 @@
         </nav>
     </header>
     
-        
         <main>
             
             <!-- ?BANNER -->
@@ -49,7 +50,7 @@
                 <div class="thumbnail"></div>
                 
                 <div class="button-block">
-                    <button type="button" class="button" onclick="newWall()">New Wall !</button>
+                     <button type="button" id="newWallButton" class="button">New Wall !</button>
                 </div>
                 
             </section>
@@ -107,13 +108,13 @@
                 <form action="">
                     <div class="contactForm">
                         <div class="inputBox">
-                            <input type="text" name="name" id="name" placeholder="Name">
+                            <input type="text" name="name" id="name" placeholder="Nam0*" required>
                         </div>
                         <div class="inputBox">
-                            <input type="email" name="email" id="email" placeholder="Email">
+                            <input type="email" name="email" id="email" placeholder="Email*" required>
                         </div>
                         <div class="inputBox">
-                            <textarea name="message" id="mesage" placeholder="Meow Message !"></textarea>
+                            <textarea name="message" id="mesage" placeholder="Meow Message !*" required></textarea>
                         </div>
                         <div class="inputBox center" style="margin-bottom: 0;">
                             <button type="submit">Send</button>
@@ -125,40 +126,25 @@
             
         </main>
         
+    </div>
         
         <!-- ?FOOTER -->
         <footer id="footer">
             
             <div class="block">
                 <h3>Meow Development Agency</h3>
-                <p><span class="blue">Y</span>ohann & <span class="pink">J</span>ustine</p>
+                <p><span class="blue footer-letter">Y</span>ohann & <span class="pink footer-letter">J</span>ustine</p>
                 <p class="love">Made with <span style="text-decoration: line-through;">Cats</span> Love, Copyright &copy; 2021 </p>
             </div>
             
         </footer>
         
-    </div>
     
     
-    
-    <!-- ?SCRIPT -->
-    <script type="text/javascript" src="App/app.js"></script>
-    <script type="text/javascript" src="App/vanilla-tilt.min.js"></script>
-    <script>
-        VanillaTilt.init(document.querySelectorAll(".thumb"), {
-            max: 25,
-            speed: 400,
-            glare: true, 
-            "max-glare": 0.8,
-            axis: 'x',
-        });
-        VanillaTilt.init(document.querySelectorAll(".card"), {
-            max: 15,
-            speed: 300,
-            glare: true, 
-            "max-glare": 0.2,
-            perspective: 800,
-        });
-    </script>
+    <!-- SCRIPT -->
+    <script type="text/javascript" src="./js/app.js"></script>
+    <script type="text/javascript" src="./js/tilt.js"></script>
+    <script type="text/javascript" src="./js/vanilla-tilt.min.js"></script>
+
 </body>
 </html>

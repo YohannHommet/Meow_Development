@@ -89,10 +89,6 @@ p::first-letter {
     animation: kit 2s ease infinite alternate;
 }
 
-/* #header a.logo:hover {
-    animation: kit 1.5s ease infinite alternate;
-} */
-
 #header nav {
     display: flex;
     justify-content: space-evenly;
@@ -149,7 +145,7 @@ p::first-letter {
 
 #banner {
     position: relative;
-    background-image: url(../img/bg_chat.jpg);
+    background-image: url(/img/bg_chat.jpg);
     background-size: cover;
     background-position: center center;
     
@@ -166,10 +162,31 @@ p::first-letter {
     align-items: center;
 }
 
+#banner:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    z-index: 2;
+    background: linear-gradient(to top, rgb(0, 0, 0), transparent)
+}
+#banner:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgb(0, 0, 0), transparent)
+}
+
 #banner .content {
-    align-self: center;
-    justify-self: flex-start;
-    margin-top: -7rem;
+    max-width: 100%;
+    transform: translateY(-30%);
+    z-index: 3;
 }
 
 #banner .content .title {
@@ -420,17 +437,43 @@ p::first-letter {
 }
 
 #contact form {
+    position: relative;
     display: grid;
     grid-template-columns: 60% 40%;
     grid-template-rows: 1fr;
-    background: linear-gradient(180deg, rgba(5,5,5,1) 5%, rgba(255,255,255,0) 35%, rgba(255,255,255,0) 65%, rgba(5,5,5,1) 95%), url(../img/bg_contact-dark.jpg) no-repeat center center;
+    /* background: linear-gradient(180deg, rgba(5,5,5,1) 5%, rgba(255,255,255,0) 35%, rgba(255,255,255,0) 65%, rgba(5,5,5,1) 95%), url(../img/bg_contact-dark.jpg) no-repeat center center; */
+    background: url(/img/bg_contact-dark.jpg) no-repeat center center;
     background-size: cover;
 }
+
+#contact form:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgb(0, 0, 0), transparent)
+}
+
+#contact form:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 2;
+    background: linear-gradient(to top, rgb(0, 0, 0), transparent)
+}
+
 #contact form .contactForm {
     background: rgba(0, 0, 0, 0.1);
     box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.4);
-    /* backdrop-filter: blur(4px); */
-    /* -webkit-backdrop-filter: blur(4px); */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 3;
 }
 
 #contact .contactForm .inputBox {
@@ -516,6 +559,10 @@ p::first-letter {
     color: rgb(195, 195, 195);
     font-size: 1.4rem;
     text-align: center;
+}
+
+#footer .block p span.footer-letter {
+    font-size: 1.4rem;
 }
 
 #footer .block .love {
