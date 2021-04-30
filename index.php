@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     
     <title>Meow Development</title>
@@ -70,7 +70,7 @@
                 <div class="team">
                     <div class="card">
                         <div class="imgBx">
-                            <img src="../img/team/sm_22.jpg" alt="">
+                            <img src="/img/team/sm_22.jpg" alt="">
                         </div>
                         <div class="card-content">
                             <p>
@@ -83,7 +83,7 @@
                     
                     <div class="card">
                         <div class="imgBx">
-                            <img src="../img/team/sm_17.jpg" alt="">
+                            <img src="/img/team/sm_17.jpg" alt="">
                         </div>
                         <div class="card-content">
                             <p>
@@ -105,16 +105,16 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora pariatur, laboriosam animi</p>
                 </div>
                 
-                <form action="">
+                <form action="php/contact_form.php" method="post">
                     <div class="contactForm">
                         <div class="inputBox">
-                            <input type="text" name="name" id="name" placeholder="Nam0*" required>
+                            <input type="text" name="name" id="name" placeholder="Name*" required>
                         </div>
                         <div class="inputBox">
                             <input type="email" name="email" id="email" placeholder="Email*" required>
                         </div>
                         <div class="inputBox">
-                            <textarea name="message" id="mesage" placeholder="Meow Message !*" required></textarea>
+                            <textarea name="message" id="message" placeholder="Meow Message !*" required></textarea>
                         </div>
                         <div class="inputBox center" style="margin-bottom: 0;">
                             <button type="submit">Send</button>
@@ -134,12 +134,11 @@
             <div class="block">
                 <h3>Meow Development Agency</h3>
                 <p><span class="blue footer-letter">Y</span>ohann & <span class="pink footer-letter">J</span>ustine</p>
-                <p class="love">Made with <span style="text-decoration: line-through;">Cats</span> Love, Copyright &copy; 2021 </p>
+                <p class="love">Made with <span style="text-decoration: line-through;">Cats</span> Love, Copyright &copy; <?= date("Y") ?> </p>
             </div>
             
         </footer>
-        
-    
+
     
     <!-- SCRIPT -->
     <script type="text/javascript" src="js/app.js"></script>
