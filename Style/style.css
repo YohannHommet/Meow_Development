@@ -16,18 +16,37 @@
     font-size: 16px;
 }
 
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 0.7rem;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--black);
+
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,.6);
+    border-radius: 1.5rem;
+}
+
 body {
     background-color: var(--black);
+    overflow-x: hidden;
+
 }
 
 div.container {
     max-width: 1600px;
     margin: 0 auto;
+    /* overflow-x: hidden; */
 }
 
 section#banner,
 section#wall,
-section#team, 
+section#team,
 section#contact {
     padding: 100px;
 }
@@ -40,12 +59,15 @@ h2 {
 p::first-letter {
     color: var(--primary);
 }
+
 .blue {
     color: var(--primary);
 }
+
 .pink {
     color: var(--secondary);
 }
+
 .sub {
     font-size: 5.5rem;
 }
@@ -56,16 +78,16 @@ p::first-letter {
     position: fixed;
     top: 0;
     left: 0;
-    
+
     display: grid;
     grid-template-columns: 5% 35% 55% 5%;
     grid-template-rows: 100px;
     height: 100px;
     width: 100%;
-    
+
     background-color: rgb(5, 5, 5, 0.7);
     backdrop-filter: blur(10px);
-    
+
     transition: all 0.35s linear;
     z-index: 300;
 }
@@ -79,11 +101,11 @@ p::first-letter {
 #header a.logo {
     grid-column: 2/3;
     align-self: center;
-    
+
     font-size: 1.6rem;
     font-weight: 500;
     letter-spacing: 0.05rem;
-    
+
     color: rgb(0, 234, 255);
     text-decoration: none;
     animation: kit 2s ease infinite alternate;
@@ -96,6 +118,7 @@ p::first-letter {
 }
 
 #header nav a {
+    position: relative;
     align-self: center;
     margin-left: 80px;
     color: #fff;
@@ -116,14 +139,14 @@ p::first-letter {
 #header nav a:after {
     content: "";
     position: absolute;
-    bottom: -15%;
+    top: 1.7rem;
     left: 0;
-    
+
     height: 2px;
     width: 100%;
     display: block;
     background-color: rgb(0, 234, 255);
-    
+
     transform-origin: center;
     transition: 0.3s linear;
     transform: scale(0);
@@ -148,7 +171,7 @@ p::first-letter {
     background-image: url(/img/bg_chat.jpg);
     background-size: cover;
     background-position: center center;
-    
+
     left: 50%;
     right: 50%;
     margin-left: -50vw;
@@ -156,7 +179,7 @@ p::first-letter {
     max-width: 100vw;
     width: 100vw;
     height: 100vh;
-    
+
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -172,6 +195,7 @@ p::first-letter {
     z-index: 2;
     background: linear-gradient(to top, rgb(0, 0, 0), transparent)
 }
+
 #banner:after {
     content: "";
     position: absolute;
@@ -237,7 +261,7 @@ p::first-letter {
     position: relative;
     filter: opacity(0.8);
     margin: auto;
-    
+
     transition: all 0.25s linear;
     animation: pop 1.8s ease-in-out normal;
 }
@@ -261,18 +285,19 @@ p::first-letter {
     border: 1px solid white;
     padding: 5px 65px 7px;
     position: relative;
-    
+
     box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.2);
     transition: 0.3s ease-in-out;
     z-index: 2;
 }
+
 #wall .button-block .button:hover {
     color: rgba(5, 5, 5);
     transform: translateZ(20px);
     text-shadow: -3px 3px 4px rgba(5, 5, 5, 0.5);
     box-shadow: 0 0 15px 3px rgba(255, 255, 255, 0.5);
     border: 1px solid black;
-    
+
     transition: color 0.8s ease-in-out;
 }
 
@@ -299,7 +324,7 @@ p::first-letter {
 
 
 
-#team  {
+#team {
     padding: 0 100px;
 }
 
@@ -311,14 +336,14 @@ p::first-letter {
     margin-left: -50vw;
     margin-right: -50vw;
     max-width: 100vw;
-    
+
     background: #101010;
     border: 2px solid #313131;
     z-index: 100;
-    
+
     display: flex;
     justify-content: center;
-    
+
 }
 
 #team .block .blockDescription {
@@ -332,6 +357,7 @@ p::first-letter {
     font-size: 1.8em;
     font-weight: 300;
 }
+
 #team .block .bg {
     position: absolute;
     background: url(../img/patte_noBg.png) no-repeat center center;
@@ -491,9 +517,11 @@ p::first-letter {
     font-weight: 300;
     resize: none;
 }
+
 .contactForm .inputBox textarea {
     height: 300px;
 }
+
 #contact form button {
     background: rgb(5, 5, 5);
     margin-top: 20px;
@@ -502,7 +530,7 @@ p::first-letter {
     border: 1px solid white;
     padding: 2px 45px 5px;
     position: relative;
-    
+
     box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.2);
     transition: 0.3s ease-in-out;
     z-index: 2;
@@ -514,7 +542,7 @@ p::first-letter {
     text-shadow: -3px 3px 4px rgba(5, 5, 5, 0.5);
     box-shadow: 0 0 15px 3px rgba(255, 255, 255, 0.5);
     border: 1px solid black;
-    
+
     transition: color 0.8s ease-in-out;
 }
 
@@ -569,7 +597,7 @@ p::first-letter {
     color: rgb(151, 151, 151);
     align-items: center;
     font-size: 1.3em;
-    margin-top: 80px;   
+    margin-top: 80px;
 }
 
 #footer .block .love::first-letter {
@@ -592,22 +620,22 @@ p::first-letter {
     div.container {
         max-width: 1400px;
     }
-    
+
     h2 {
         font-size: 5em;
     }
-    
+
     #wall h2 {
         margin-right: 50px;
     }
-    
+
     #wall .thumbnail {
         display: grid;
         grid-template-columns: repeat(3, 350px);
         grid-template-rows: repeat(4, 350px);
         margin: auto;
     }
-    
+
     #contact {
         padding: 100px 100px;
     }
@@ -621,22 +649,22 @@ p::first-letter {
     div.container {
         max-width: 1200px;
     }
-    
+
     section#banner,
     section#wall,
-    section#team, 
+    section#team,
     section#contact {
         padding: 50px;
     }
-    
+
     h2 {
         font-size: 4.5em;
     }
-    
+
     #wall h2 {
         margin-right: 0;
     }
-    
+
     #team .block .blockDescription p,
     #contact .block p {
         font-size: 1.6rem;
@@ -651,20 +679,20 @@ p::first-letter {
     div.container {
         max-width: 1000px;
     }
-    
+
     #header nav a {
         margin-left: 60px;
     }
-    
+
     #wall .thumbnail {
         grid-template-columns: repeat(2, 350px);
         grid-template-rows: repeat(6, 350px);
     }
-    
+
     #team div.team {
         justify-content: space-between;
     }
-    
+
 }
 
 
@@ -672,83 +700,85 @@ p::first-letter {
 
 
 @media (max-width: 1000px) {
-    
+
     div.container {
         max-width: 800px;
     }
-    
+
     #team .block .blockDescription p,
     #contact .block p {
         font-size: 1.5rem;
     }
-    
+
     #header {
         grid-template-columns: 5% 1fr 1fr 5%;
         transition: 0.4s;
     }
+
     #header nav {
         display: none;
     }
-    
+
     #header .burgerToggle {
         display: block;
         position: relative;
         width: 40px;
         height: 40px;
         grid-column: 3/4;
-        
-        background-image: url(../img/menu.png);
+
+        background-image: url(/img/menu.png);
         background-size: 30px;
         background-repeat: no-repeat;
         background-position: center;
         cursor: pointer;
-        
+
         transition: 0.2s linear;
         margin: auto 0;
         margin-left: auto;
         z-index: 300;
     }
-    
+
     #header .burgerToggle:hover {
         filter: opacity(0.8);
     }
-    
+
     #header .burgerToggle.active {
         display: block;
         position: relative;
-        background: url(../img/close.png);
+        background: url(/img/close.png);
         background-size: 20px;
         background-repeat: no-repeat;
         background-position: center;
         cursor: pointer;
-        
+
         margin: auto 0;
         margin-left: auto;
-        
+
         transition: all 0.4s ease-in-out;
     }
-    
+
     #header .burgerToggle.active:hover {
         transform: rotate(180deg);
         background-size: 18px;
         filter: opacity(0.8);
         transition: all 0.4s linear;
     }
-    
+
     /* *** The Nav outside the screen before we call it */
     #header .nav {
         grid-column: 3/5;
+        display: flex;
+        flex-direction: column;
         opacity: 0;
-        
+
         transform: translateY(-1500px);
-        transition: all 0.4s;
-        transform-origin: top;
+        transition: all 0.6s;
     }
-    
+
     #header .nav a {
         font-size: 1.2em;
     }
-    
+
     #header .nav.active {
         display: flex;
         flex-direction: column;
@@ -756,130 +786,131 @@ p::first-letter {
         align-items: center;
         grid-column: 3/5;
         height: 100vh;
-        
+
         background: rgba(5, 5, 5, 0.7);
         backdrop-filter: blur(7px);
-        
+
         opacity: 1;
         transform: translateY(0);
         transition: all 0.4s;
     }
-    
+
     #header .nav.active a {
         margin-left: 0;
         margin-bottom: 2.5rem;
         font-size: 1.2em;
     }
-    
+
     #header .nav.active a:hover {
         font-size: 1.3em;
         letter-spacing: 0.2em;
         font-weight: 400;
     }
-    
+
     #header .nav.active a:hover:after {
         display: none;
     }
-    
+
     /*  */
     #banner .content .title {
         font-size: 5rem;
     }
-    
+
     #banner .content p {
         margin-left: 1rem;
         font-size: 2.3rem;
     }
-    
+
     /*  */
     #team div.team {
         display: block;
     }
-    
+
     #team .team .card {
         margin: 0 auto;
         width: 60%;
         margin-bottom: 2rem;
     }
-    
+
     /*  */
     #contact {
         padding: 0 50px;
     }
-    
+
     #contact form {
         grid-template-columns: 70% auto;
     }
-    
+
 }
 
 
 @media (max-width: 800px) {
-    
+
     div.container {
         max-width: 700px;
         margin: 0 auto;
     }
-    
+
     section#banner,
     section#wall,
-    section#team, 
+    section#team,
     section#contact {
         padding: 25px;
     }
-    
+
     h2 {
         color: #fff;
         font-size: 3rem;
     }
-    
+
     #team .block .blockDescription p,
     #contact .block p {
         font-size: 1.3rem;
     }
-    
+
     .sub {
         font-size: 3.5rem;
     }
-    
+
     /* *** */
     #wall .thumbnail {
         grid-template-columns: repeat(2, 300px);
         grid-template-rows: repeat(6, 300px);
     }
-    
+
     /* ** THE TEAM ** */
     #team div.team {
         margin-top: -22rem;
     }
-    
+
     #team .block .bg {
         top: 0;
         right: 2rem;
     }
-    
+
     /* **** */
     #contact .block {
         margin-bottom: 50px;
     }
-    
+
     #contact form {
         grid-template-columns: auto;
     }
-    
+
     #contact .inputBox.center {
         display: flex;
         justify-content: center;
     }
-    
+
     /*  */
     #footer .block h3 {
         font-size: 1.4rem;
     }
-    
+
     #footer .block p {
         font-size: 1.4rem;
     }
+
     #footer .block .love {
         font-size: 1.1em;
     }
@@ -887,69 +918,70 @@ p::first-letter {
 
 
 @media (max-width: 650px) {
-    
+
     div.container {
         max-width: 650px;
         margin: 0 auto;
     }
-    
+
     section#banner,
     section#wall,
-    section#team, 
+    section#team,
     section#contact {
         padding: 1rem;
     }
-    
+
     h2 {
         color: #fff;
         font-size: 2.5rem;
     }
-    
+
     #team .block .blockDescription p,
     #contact .block p {
         font-size: 1.2rem;
     }
-    
+
     .sub {
         font-size: 2.5rem;
     }
-    
+
     /*  */
     #banner .content .title {
         font-size: 3.5rem;
     }
-    
+
     #banner .content p {
         font-size: 2rem;
     }
-    
+
     /* *** */
     #wall h2 {
         margin-bottom: 25px;
     }
-    
+
     #wall .thumbnail {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(12, 250px);
     }
-    
+
     #wall .thumbnail .thumb {
         width: 80%;
     }
-    
+
     #wall .button-block .button {
         font-size: 1.3rem;
         padding: 5px 45px 7px;
     }
-    
+
     /*  */
     #team .team .card {
         width: 70%;
     }
+
     #team div.team {
         margin-top: -28rem;
     }
-    
+
     /*  */
     #contact form button {
         margin-top: 1rem;
@@ -957,7 +989,7 @@ p::first-letter {
         border: 1px solid white;
         padding: 2px 35px 5px;
     }
-    
+
     /*  */
     #footer {
         padding-top: 3rem;
@@ -970,147 +1002,148 @@ p::first-letter {
     #team div.team {
         margin-top: -26rem;
     }
-    
+
     #team .team .card {
         width: 100%;
     }
-    
+
     #team .card .card-content {
         padding: 1rem;
     }
-    
+
     /*  */
     #footer .block h3 {
         font-size: 1.2rem;
     }
-    
+
     #footer .block p {
         font-size: 1.2rem;
     }
+
     #footer .block .love {
         font-size: 0.9rem;
     }
-    
+
 }
 
 
 @keyframes kit {
-    
+
     0%,
     100% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 0%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
+
     5% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 10%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
+
     10% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 20%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
+
     15% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 30%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
+
     20% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 40%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
+
     25% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 50%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
+
     30% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 60%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
+
     35% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 70%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
+
     40% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 80%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
+
     45% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 90%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
+
     50% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
+
     55% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 90%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
+
     60% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 80%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
+
     65% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 70%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
+
     70% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 60%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
+
     75% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 50%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
+
     80% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 40%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
+
     85% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 30%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
+
     90% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 20%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    
+
     95% {
         background: linear-gradient(90deg, rgba(82, 241, 255, 1) 0%, white 10%);
         -webkit-background-clip: text;
@@ -1122,9 +1155,9 @@ p::first-letter {
     from {
         opacity: 0;
     }
-    
+
     to {
         opacity: 1;
     }
-    
+
 }
