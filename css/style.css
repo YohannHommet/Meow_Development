@@ -189,7 +189,7 @@ p::first-letter {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 300px;
+    height: 500px;
     z-index: 2;
     background: linear-gradient(to top, rgb(0, 0, 0), transparent)
 }
@@ -252,12 +252,12 @@ p::first-letter {
 }
 
 #wall .thumbnail .thumb {
+    position: relative;
     height: 100%;
     width: 100%;
     object-fit: cover;
     background-position: center center;
-    position: relative;
-    filter: opacity(0.8);
+    opacity: 70%;
     margin: auto;
 
     transition: all 0.25s linear;
@@ -265,8 +265,7 @@ p::first-letter {
 }
 
 #wall .thumbnail .thumb:hover {
-    filter: opacity(1.1);
-    filter: scale(1.08)
+    opacity: 100%;
 }
 
 #wall .button-block {

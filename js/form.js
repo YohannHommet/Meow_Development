@@ -1,19 +1,16 @@
 const form = {
 
-    nameInput:          document.querySelector('#name'),
-    emailInput:         document.querySelector('#email'),
-    messageInput:       document.querySelector('#message'),
-    errorMessage:       document.querySelector('.js-errors'),
-    submitFormButton:   document.querySelector('.js-submitFormButton'),
+    nameInput: document.querySelector('#name'),
+    emailInput: document.querySelector('#email'),
+    messageInput: document.querySelector('#message'),
+    errorMessage: document.querySelector('.js-errors'),
+    submitFormButton: document.querySelector('.js-submitFormButton'),
 
     init: () => {
 
-        // Pour gérer le formulaire
         form.nameInput.addEventListener('keyup', form.handleNameInput);
         form.emailInput.addEventListener('keyup', form.handleEmailInput);
         form.messageInput.addEventListener('keyup', form.handleMessageInput);
-        console.log(form.errorMessage);
-
     },
 
     // Fonctions pour la vérification des input sur la page contact
@@ -31,7 +28,7 @@ const form = {
 
     handleEmailInput: () => {
         let emailValue = form.emailInput.value;
-        let emailFormat = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        let emailFormat = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         let emailTest = emailFormat.test(emailValue);
 
         if (emailTest === true) {
@@ -67,8 +64,7 @@ const form = {
             form.errorMessage.style.visibility = 'hidden';
             form.errorMessage.innerText = "";
         }
-
-    }
+    },
 
 }
 
