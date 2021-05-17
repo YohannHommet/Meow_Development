@@ -91,21 +91,23 @@ const app = {
 
         if (nameValue.length < 3) {
             app.nameInput.style.border = '1px #ff0073 solid';
-            app.submitFormButton.disabled = false;
-            app.submitFormButton.style.cursor = 'pointer';
+            app.submitFormButton.disabled = true;
+            app.submitFormButton.style.cursor = 'not-allowed';
             return true;
         } else {
             app.nameInput.style.border = '1px #555 solid';
-            app.submitFormButton.disabled = true;
-            app.submitFormButton.style.cursor = 'not-allowed';
+            app.submitFormButton.disabled = false;
+            app.submitFormButton.style.cursor = 'pointer';
             return false
         }
     },
-    handleEmailInput: (e) => {
+    handleEmailInput: () => {
         let emailValue = app.emailInput.value;
         let emailFormat = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        let emailTest = emailFormat.test(emailValue);
 
-        if (emailFormat.test(emailValue)) {
+        if (emailTest === true) {
+            console.log(emailTest);
             app.emailInput.style.border = '1px #555 solid';
             app.submitFormButton.disabled = false;
             app.submitFormButton.style.cursor = 'pointer';
@@ -122,13 +124,13 @@ const app = {
 
         if (messageValue.length < 6) {
             app.messageInput.style.border = '1px #ff0073 solid';
-            app.submitFormButton.disabled = false;
-            app.submitFormButton.style.cursor = 'pointer';
+            app.submitFormButton.disabled = true;
+            app.submitFormButton.style.cursor = 'not-allowed';
             return true;
         } else {
             app.messageInput.style.border = '1px #555 solid';
-            app.submitFormButton.disabled = true;
-            app.submitFormButton.style.cursor = 'not-allowed';
+            app.submitFormButton.disabled = false;
+            app.submitFormButton.style.cursor = 'pointer';
             return false
         }
     }
