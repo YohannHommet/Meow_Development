@@ -2,7 +2,7 @@
 
 :root {
     --primary: #52f1ff;
-    --secondary: #ff0073;
+    --secondary: #f8147c;
     --black: #050505;
     --grey: #313131;
 }
@@ -279,7 +279,7 @@ p::first-letter {
 #wall .button-block .button {
     background: var(--black);
     color: white;
-    font-size: 2rem;
+    font-size: 1.6rem;
     border: 1px solid white;
     padding: 5px 65px 7px;
     position: relative;
@@ -291,7 +291,7 @@ p::first-letter {
 }
 
 #wall .button-block .button:hover {
-    color: rgba(5, 5, 5);
+    color: rgb(5, 5, 5);
     transform: translateZ(20px);
     text-shadow: -3px 3px 4px rgba(5, 5, 5, 0.5);
     box-shadow: 0 0 15px 3px rgba(255, 255, 255, 0.5);
@@ -360,7 +360,6 @@ p::first-letter {
 #team .block .bg {
     position: absolute;
     background: url(/img/patte_noBg.png) no-repeat center center;
-    background-size: auto;
     top: 1rem;
     right: 15rem;
     width: 500px;
@@ -383,7 +382,7 @@ p::first-letter {
 #team div.card {
     background: rgb(5, 5, 5);
     border: 2px solid #313131;
-    width: 400px;
+    width: 350px;
     border-radius: 10px;
     transform-style: preserve-3d;
     box-shadow: 0 0 25px 2px rgba(31, 31, 31, 0.8);
@@ -493,15 +492,18 @@ p::first-letter {
 }
 
 #contact form .contactForm {
-    background: rgba(0, 0, 0, 0.1);
-    box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 3px 3px 15px 2px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    z-index: 3;
+    z-index: 10;
 }
 
 #contact .contactForm .inputBox {
-    margin-bottom: 20px;
+    margin-bottom: 1.2rem;
+}
+
+#contact .contactForm .last {
+    margin-bottom: 0;
 }
 
 #contact .contactForm .inputBox input,
@@ -522,7 +524,7 @@ p::first-letter {
 
 #contact form button {
     background: rgb(5, 5, 5);
-    margin-top: 20px;
+    margin-top: 2rem;
     color: white;
     font-size: 1.5em;
     border: 1px solid white;
@@ -568,6 +570,14 @@ p::first-letter {
     letter-spacing: 2px;
 }
 
+#contact .js-errors {
+    visibility: hidden;
+    color: var(--secondary);
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
 
 /* ************************** FOOTER ****************************** */
 
@@ -600,15 +610,68 @@ p::first-letter {
 #footer .block .love {
     color: rgb(151, 151, 151);
     align-items: center;
+}
+
+#footer .block .small {
     font-size: 1em;
-    margin-top: 5rem;
 }
 
 #footer .block .love::first-letter {
     color: rgb(151, 151, 151);
 }
 
+#footer .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin: 4rem 0;
+}
 
+#footer .social ul {
+    display: inline-flex;
+}
+
+#footer .social ul li{
+    list-style: none;
+}
+
+#footer .social ul li a{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-align: center;
+    margin: 0 2rem;
+    border-radius: 50%;
+    padding: 6px;
+    box-sizing: border-box;
+    text-decoration: none;
+    box-shadow: 0 0 8px 1px rgba(100, 100, 100, 1);
+    background: linear-gradient(0deg, #ccc, #eee);
+    transition: 0.4s;
+}
+
+#footer .social ul li a:hover{
+    box-shadow: 0 0 12px 2px var(--primary);
+}
+
+#footer .social ul li a .fab{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+
+    line-height: calc(50px - 12px);
+    font-size: 24px;
+    color: var(--black);
+    transition: 0.4s;
+    background: linear-gradient(0deg, #eee, #ccc);
+}
+
+#footer .social ul li a:hover .fab{
+    color: var(--secondary);
+}
 
 
 
@@ -737,8 +800,7 @@ p::first-letter {
         cursor: pointer;
 
         transition: 0.2s linear;
-        margin: auto 0;
-        margin-left: auto;
+        margin: auto 0 auto auto;
         z-index: 300;
     }
 

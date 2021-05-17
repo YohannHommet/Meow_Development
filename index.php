@@ -75,7 +75,6 @@
                         <div class="card-content">
                             <p>
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum velit quas tempora voluptatum atque culpa aut error. Repudiandae nostrum perferendis maiores delectus corrupti et ullam? Expedita eveniet perspiciatis quidem quibusdam.
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, asperiores minus sed saepe praesentium aperiam.
                             </p>
                             <h3 class="name blue">Yohann</h3>
                         </div>
@@ -88,7 +87,6 @@
                         <div class="card-content">
                             <p>
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum velit quas tempora voluptatum atque culpa aut error. Repudiandae nostrum perferendis maiores delectus corrupti et ullam? Expedita eveniet perspiciatis quidem quibusdam.
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, asperiores minus sed saepe praesentium aperiam.
                             </p>
                             <h3 class="name pink">Justine</h3>
                         </div>
@@ -117,11 +115,14 @@
                                 <input type="email" name="email" id="email" placeholder="Email*" required>
                             </label>
                         </div>
-                        <div class="inputBox">
+                        <div class="inputBox last">
                             <label for="message">
                                 <textarea name="message" id="message" placeholder="Meow Message !*" required></textarea>
                             </label>
                         </div>
+
+                        <small class="js-errors"></small>
+
                         <div class="inputBox center" style="margin-bottom: 0;">
                             <button type="submit" class="js-submitFormButton">Send</button>
                         </div>
@@ -140,14 +141,33 @@
             <div class="block">
                 <h3>Meow Development Agency</h3>
                 <p><span class="blue footer-letter">Y</span>ohann & <span class="pink footer-letter">J</span>ustine</p>
-                <p class="love">Made with <span style="text-decoration: line-through;">Cats</span> Love, Copyright &copy; <?= date("Y") ?> </p>
             </div>
-            
+
+            <div class="social">
+                <ul class="">
+                    <li>
+                        <a href="https://twitter.com/YoH_DevBack" target="_blank" ><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/yohann-hommet/" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/YohannHommet" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <p class="love small">Made with <span style="text-decoration: line-through;">Cats</span> Love, Copyright &copy; <?= date("Y") ?></p>
+            </div>
+
+
         </footer>
 
     
     <!-- SCRIPT -->
     <script type="text/javascript" src="./js/app.js"></script>
+    <script type="text/javascript" src="./js/form.js"></script>
     <script type="text/javascript" src="./js/tilt.js"></script>
     <script type="text/javascript" src="./js/vanilla-tilt.min.js"></script>
 

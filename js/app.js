@@ -4,11 +4,7 @@ const app = {
     img: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
     displayedImg: [],
 
-    newWallButton:      document.querySelector("#newWallButton"),
-    nameInput:          document.querySelector('#name'),
-    emailInput:         document.querySelector('#email'),
-    messageInput:       document.querySelector('#message'),
-    submitFormButton:   document.querySelector('.js-submitFormButton'),
+    newWallButton: document.querySelector("#newWallButton"),
 
 
     init: () => {
@@ -17,12 +13,6 @@ const app = {
             const navbar = document.querySelector('.navbar')
             navbar.classList.toggle('sticky', window.scrollY > 0)
         });
-
-        // Pour gérer le formulaire
-        app.nameInput.addEventListener('keyup', app.handleNameInput);
-        app.emailInput.addEventListener('keyup', app.handleEmailInput);
-        app.messageInput.addEventListener('keyup', app.handleMessageInput);
-
 
         // Button qui permet de changer le wall
         app.newWallButton.addEventListener('click', app.newWall);
@@ -41,7 +31,6 @@ const app = {
         while (thumbnail.firstChild) {
             thumbnail.removeChild(thumbnail.lastChild);
         }
-
         app.createThumbnail();
     },
 
@@ -85,55 +74,7 @@ const app = {
     },
 
 
-    // Fonctions pour la vérification des input sur la page contact
-    handleNameInput: () => {
-        let nameValue = app.nameInput.value;
 
-        if (nameValue.length < 3) {
-            app.nameInput.style.border = '1px #ff0073 solid';
-            app.submitFormButton.disabled = true;
-            app.submitFormButton.style.cursor = 'not-allowed';
-            return true;
-        } else {
-            app.nameInput.style.border = '1px #555 solid';
-            app.submitFormButton.disabled = false;
-            app.submitFormButton.style.cursor = 'pointer';
-            return false
-        }
-    },
-    handleEmailInput: () => {
-        let emailValue = app.emailInput.value;
-        let emailFormat = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        let emailTest = emailFormat.test(emailValue);
-
-        if (emailTest === true) {
-            console.log(emailTest);
-            app.emailInput.style.border = '1px #555 solid';
-            app.submitFormButton.disabled = false;
-            app.submitFormButton.style.cursor = 'pointer';
-            return true;
-        } else {
-            app.emailInput.style.border = '1px #ff0073 solid';
-            app.submitFormButton.disabled = true;
-            app.submitFormButton.style.cursor = 'not-allowed';
-            return false;
-        }
-    },
-    handleMessageInput: () => {
-        let messageValue = app.messageInput.value;
-
-        if (messageValue.length < 6) {
-            app.messageInput.style.border = '1px #ff0073 solid';
-            app.submitFormButton.disabled = true;
-            app.submitFormButton.style.cursor = 'not-allowed';
-            return true;
-        } else {
-            app.messageInput.style.border = '1px #555 solid';
-            app.submitFormButton.disabled = false;
-            app.submitFormButton.style.cursor = 'pointer';
-            return false
-        }
-    }
 
 }
 
