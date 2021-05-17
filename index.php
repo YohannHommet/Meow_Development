@@ -16,12 +16,12 @@
     
     <!-- ?HEADER -->
     <header class="navbar" id="header">
-        <a href="#" class="logo">Meow Development<span style="margin-left: 10px;">&hearts;</span></a>
+        <a href="#" class="logo">Meow Development<span style="margin-left: 10px; font-size: 1.7rem;">&hearts;</span></a>
 
         <div class="burgerToggle" onclick="toggleMenu()"></div>
 
         <nav class="nav">
-            <a class="underline" href="#header" onclick="toggleMenu()">Accueil</a>
+            <a class="underline" href="#banner" onclick="toggleMenu()">Accueil</a>
             <a class="underline" href="#wall" onclick="toggleMenu()">The Wall</a>
             <a class="underline" href="#team" onclick="toggleMenu()">The Meow Team</a>
             <a class="underline" href="#contact" onclick="toggleMenu()">Contact</a>
@@ -105,19 +105,25 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora pariatur, laboriosam animi</p>
                 </div>
                 
-                <form action="php/contact_form.php" method="post">
+                <form action="https://formsubmit.co/58d369dbd561e229e37901a22c3008df" method="post" id="contactForm">
                     <div class="contactForm">
                         <div class="inputBox">
-                            <input type="text" name="name" id="name" placeholder="Name*" required>
+                            <label for="name">
+                                <input type="text" name="name" id="name" placeholder="Name*" required>
+                            </label>
                         </div>
                         <div class="inputBox">
-                            <input type="email" name="email" id="email" placeholder="Email*" required>
+                            <label for="email">
+                                <input type="email" name="email" id="email" placeholder="Email*" required>
+                            </label>
                         </div>
                         <div class="inputBox">
-                            <textarea name="message" id="message" placeholder="Meow Message !*" required></textarea>
+                            <label for="message">
+                                <textarea name="message" id="message" placeholder="Meow Message !*" required></textarea>
+                            </label>
                         </div>
                         <div class="inputBox center" style="margin-bottom: 0;">
-                            <button type="submit">Send</button>
+                            <button type="submit" class="js-submitFormButton">Send</button>
                         </div>
                     </div>
                 </form>

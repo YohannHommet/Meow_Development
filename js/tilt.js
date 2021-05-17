@@ -8,8 +8,7 @@ const tilt =
                 glare: true,
                 "max-glare": 0.8,
                 axis: 'x',
-            }),
-            console.log('tilt')
+            });
 
             VanillaTilt.init(document.querySelectorAll(".card"), {
                 max: 10,

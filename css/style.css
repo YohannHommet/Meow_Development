@@ -265,7 +265,7 @@ p::first-letter {
 }
 
 #wall .thumbnail .thumb:hover {
-    filter: opacity(1);
+    filter: opacity(1.1);
     filter: scale(1.08)
 }
 
@@ -287,6 +287,7 @@ p::first-letter {
     box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.2);
     transition: 0.3s ease-in-out;
     z-index: 2;
+    cursor: pointer;
 }
 
 #wall .button-block .button:hover {
@@ -541,6 +542,7 @@ p::first-letter {
     border: 1px solid black;
 
     transition: color 0.8s ease-in-out;
+    cursor: pointer;
 }
 
 #contact form button::before {
@@ -560,6 +562,11 @@ p::first-letter {
     left: 0;
 }
 
+#contact input[type='text'],
+#contact input[type='email'],
+#contact textarea {
+    letter-spacing: 2px;
+}
 
 
 /* ************************** FOOTER ****************************** */
