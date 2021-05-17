@@ -749,14 +749,11 @@ p::first-letter {
     #header .burgerToggle.active {
         display: block;
         position: relative;
-        background: url(/img/close.png);
         background-size: 20px;
-        background-repeat: no-repeat;
-        background-position: center;
+        background: url(/img/close.png) no-repeat center;
         cursor: pointer;
 
-        margin: auto 0;
-        margin-left: auto;
+        margin: auto 0 auto auto;
 
         transition: all 0.4s ease-in-out;
     }
@@ -795,8 +792,8 @@ p::first-letter {
         backdrop-filter: blur(7px);
 
         opacity: 1;
-        transform: translateY(0);
         transition: all 0.4s;
+        transform: translateY(0);
     }
 
     #header .nav.active a {
@@ -831,9 +828,8 @@ p::first-letter {
     }
 
     #team .team .card {
-        margin: 0 auto;
         width: 60%;
-        margin-bottom: 2rem;
+        margin: 0 auto 2rem;
     }
 
     /*  */
@@ -947,6 +943,33 @@ p::first-letter {
 
     .sub {
         font-size: 2.5rem;
+    }
+
+    /*  */
+    #header .nav {
+        grid-column: 1/5;
+    }
+
+    #header .nav a {
+        font-size: 1.1em;
+    }
+
+    #header .nav.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-column: 1/5;
+        height: auto;
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 0.4s;
+    }
+
+    #header .nav.active a {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+        font-size: 1.2em;
     }
 
     /*  */
