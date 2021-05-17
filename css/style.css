@@ -749,12 +749,15 @@ p::first-letter {
     #header .burgerToggle.active {
         display: block;
         position: relative;
-        background-size: 20px;
-        background: url(/img/close.png) no-repeat center;
-        cursor: pointer;
-
         margin: auto 0 auto auto;
 
+        background-size: 20px;
+        background: url(/img/close.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        cursor: pointer;
         transition: all 0.4s ease-in-out;
     }
 
@@ -955,20 +958,12 @@ p::first-letter {
     }
 
     #header .nav.active {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         grid-column: 1/5;
         height: auto;
-        opacity: 1;
-        transform: translateY(0);
-        transition: all 0.4s;
     }
 
     #header .nav.active a {
-        margin-left: 0;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1.2rem;
         font-size: 1.2em;
     }
 
