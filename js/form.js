@@ -13,8 +13,12 @@ const form = {
         form.messageInput.addEventListener('keyup', form.handleMessageInput);
     },
 
-    // Fonctions pour la vérification des input sur la page contact
-    handleNameInput: () => {
+    /**
+     * Vérification des input sur la page contact
+     * @returns 
+     */
+    handleNameInput: () => 
+    {
         let nameValue = form.nameInput.value;
 
         if (nameValue.length < 3) {
@@ -26,7 +30,9 @@ const form = {
         }
     },
 
-    handleEmailInput: () => {
+
+    handleEmailInput: () => 
+    {
         let emailValue = form.emailInput.value;
         let emailFormat = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         let emailTest = emailFormat.test(emailValue);
@@ -40,7 +46,9 @@ const form = {
         }
     },
 
-    handleMessageInput: () => {
+
+    handleMessageInput: () => 
+    {
         let messageValue = form.messageInput.value;
 
         if (messageValue.length < 6) {
@@ -52,7 +60,9 @@ const form = {
         }
     },
 
-    formValidation: (element, border, isDisabled, cursor, message = null) => {
+
+    formValidation: (element, border, isDisabled, cursor, message = null) => 
+    {
         element.style.border = border;
         form.submitFormButton.disabled = isDisabled;
         form.submitFormButton.style.cursor = cursor;
@@ -67,5 +77,3 @@ const form = {
     },
 
 }
-
-document.addEventListener('DOMContentLoaded', form.init);

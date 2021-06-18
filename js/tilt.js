@@ -19,6 +19,3 @@ const tilt =
             });
     }
 }
-
-
-document.addEventListener('DOMContentLoaded', tilt.init);
