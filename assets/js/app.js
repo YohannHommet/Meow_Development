@@ -57,7 +57,7 @@ const app = {
 
                 if (!p) {
                     numbers.push(n);
-                    app.displayedImg[i].src = "./img/cats/sm_" + n + ".jpg";
+                    app.displayedImg[i].src = "assets/img/cats/sm_" + n + ".jpg";
                     app.displayedImg[i].classList.add('thumb');
                 }
             } while (p);
