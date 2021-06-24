@@ -76,11 +76,9 @@ const app = {
     },
 
 
-
-
 }
 
-// Onclick funtion
+// Onclick function
 const toggleMenu = () => {
     const burger = document.querySelector(".burgerToggle");
     const nav = document.querySelector(".nav");

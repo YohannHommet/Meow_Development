@@ -10,12 +10,12 @@ const tilt =
                 axis: 'x',
             });
 
-            VanillaTilt.init(document.querySelectorAll(".card"), {
-                max: 10,
-                speed: 100,
-                glare: true,
-                "max-glare": 0.1,
-                perspective: 500,
-            });
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 10,
+            speed: 100,
+            glare: true,
+            "max-glare": 0.1,
+            perspective: 500,
+        });
     }
 }
