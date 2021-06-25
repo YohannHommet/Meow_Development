@@ -10,6 +10,8 @@ const app = {
         tilt.init();
         form.init();
 
+        console.log(window.location.origin)
+
         // Évènement pour changer la nav au scroll
         window.addEventListener('scroll', function () {
             const navbar = document.querySelector('.navbar')
@@ -57,7 +59,7 @@ const app = {
 
                 if (!p) {
                     numbers.push(n);
-                    app.displayedImg[i].src = window.location + "/assets/img/cats/sm_" + n + ".jpg";
+                    app.displayedImg[i].src = window.location.origin + "/assets/img/cats/sm_" + n + ".jpg";
                     app.displayedImg[i].classList.add('thumb');
                 }
             } while (p);
