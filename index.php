@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     
     <title>Meow Development</title>
@@ -68,7 +68,7 @@
                 <div class="team">
                     <div class="card">
                         <div class="imgBx">
-                            <img src="./assets/img/team/sm_22.jpg" alt="">
+                            <img src="assets/img/team/sm_22.jpg" alt="">
                         </div>
                         <div class="card-content">
                             <p>
@@ -80,7 +80,7 @@
                     
                     <div class="card">
                         <div class="imgBx">
-                            <img src="./assets/img/team/sm_17.jpg" alt="">
+                            <img src="assets/img/team/sm_17.jpg" alt="">
                         </div>
                         <div class="card-content">
                             <p>
@@ -164,10 +164,10 @@
 
     
     <!-- SCRIPT -->
-    <script type="text/javascript" src="./assets/js/app.js"></script>
-    <script type="text/javascript" src="./assets/js/form.js"></script>
-    <script type="text/javascript" src="./assets/js/tilt.js"></script>
-    <script type="text/javascript" src="./assets/js/vanilla-tilt.min.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" src="assets/js/form.js"></script>
+    <script type="text/javascript" src="assets/js/tilt.js"></script>
+    <script type="text/javascript" src="assets/js/vanilla-tilt.min.js"></script>
 
 </body>
 </html>
