@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="<?= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] ?>assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     
     <title>Meow Development</title>
@@ -13,7 +13,6 @@
 <body>
     
     <div class="container">
-    
     <!-- ?HEADER -->
     <header class="navbar" id="header">
         <a href="#" class="logo">Meow Development<span style="margin-left: 10px; font-size: 1.7rem;">&hearts;</span></a>
@@ -54,7 +53,6 @@
                 </div>
                 
             </section>
-            
             
             <!-- ?THE TEAM -->
             <section id="team">
@@ -166,10 +164,10 @@
 
     
     <!-- SCRIPT -->
-    <script type="text/javascript" src="assets/js/app.js"></script>
-    <script type="text/javascript" src="assets/js/form.js"></script>
-    <script type="text/javascript" src="assets/js/tilt.js"></script>
-    <script type="text/javascript" src="assets/js/vanilla-tilt.min.js"></script>
+    <script type="text/javascript" src="<?= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] ?>assets/js/app.js"></script>
+    <script type="text/javascript" src="<?= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] ?>assets/js/form.js"></script>
+    <script type="text/javascript" src="<?= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] ?>assets/js/tilt.js"></script>
+    <script type="text/javascript" src="<?= $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] ?>assets/js/vanilla-tilt.min.js"></script>
 
 </body>
 </html>
