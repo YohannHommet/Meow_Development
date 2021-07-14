@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web Agnecy made by cats !">
+    <meta name="keywords" content="web agency cats www html css js php">
     
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
@@ -14,7 +16,7 @@
     
     <div class="container">
     <!-- ?HEADER -->
-    <header class="navbar" id="header">
+    <header class="navbar" id="header" role="navigation">
         <a href="#" class="logo">Meow Development<span style="margin-left: 10px; font-size: 1.7rem;">&hearts;</span></a>
 
         <div class="burgerToggle" onclick="toggleMenu()"></div>
@@ -29,8 +31,8 @@
     
         <main>
             
-            <!-- ?BANNER -->
-            <section id="banner">
+            <!-- BANNER -->
+            <section id="banner" role="img">
 
                 <div class="content">
                     <h1 class="title">Catisfaction </h1>
@@ -40,8 +42,7 @@
                 
             </section>
             
-            
-            <!-- ?THE WALL -->
+            <!-- THE WALL -->
             <section id="wall">
                 
                 <h2>The <span class="pink sub">W</span>all</h2>
@@ -54,13 +55,13 @@
                 
             </section>
             
-            <!-- ?THE TEAM -->
+            <!-- THE TEAM -->
             <section id="team">
                 
                 <div class="block">
                     <div class="blockDescription">
                         <h2>The Meow <span class="pink sub">T</span>eam</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora pariatur, laboriosam animi</p>
+                        <p>They are only two, but they are skilled !</p>
                     </div>
                     <div class="bg"></div>
                 </div>
@@ -68,11 +69,11 @@
                 <div class="team">
                     <div class="card">
                         <div class="imgBx">
-                            <img src="assets/img/team/sm_22.jpg" alt="">
+                            <img src="assets/img/team/sm_22.jpg" alt="Yohann">
                         </div>
                         <div class="card-content">
                             <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum velit quas tempora voluptatum atque culpa aut error. Repudiandae nostrum perferendis maiores delectus corrupti et ullam? Expedita eveniet perspiciatis quidem quibusdam.
+                                Passionné en développement web depuis 2019, je suis spécialisé en backend avec PHP et son Framework Symfony.. J'ai beaucoup appris seul avant de me lancer dans une formation en développement web avec l'école O'Clock. Je suis aujourd'hui à la recherche d'un stage pour compléter mon apprentissage.
                             </p>
                             <h3 class="name blue">Yohann</h3>
                         </div>
@@ -80,11 +81,11 @@
                     
                     <div class="card">
                         <div class="imgBx">
-                            <img src="assets/img/team/sm_17.jpg" alt="">
+                            <img src="assets/img/team/sm_17.jpg" alt="Justine">
                         </div>
                         <div class="card-content">
                             <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum velit quas tempora voluptatum atque culpa aut error. Repudiandae nostrum perferendis maiores delectus corrupti et ullam? Expedita eveniet perspiciatis quidem quibusdam.
+                                J'ai fait ma formation en développement à Angers, puis après un stage de 4 mois, j'ai trouvé un poste d'intégratrice développeuse Wordpress dans une agence sur Cholet. Je fais de l'intégration, du débogage, de la mise en ligne, et je travaille sur pleins de projets très intéressants !
                             </p>
                             <h3 class="name pink">Justine</h3>
                         </div>
@@ -93,12 +94,12 @@
             </section>
             
             
-            <!-- ?CONTACT -->
+            <!-- CONTACT -->
             <section id="contact">
                 
                 <div class="block">
                     <h2 class="title">Send us a <span class="pink sub">M</span>eow !</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora pariatur, laboriosam animi</p>
+                    <p>Here you can send us a cute message if you need more informations about us !</p>
                 </div>
                 
                 <form action="https://formsubmit.co/58d369dbd561e229e37901a22c3008df" method="post" id="contactForm">

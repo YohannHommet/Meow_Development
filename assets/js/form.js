@@ -1,9 +1,9 @@
 const form = {
 
-    nameInput: document.querySelector('#name'),
-    emailInput: document.querySelector('#email'),
-    messageInput: document.querySelector('#message'),
-    errorMessage: document.querySelector('.js-errors'),
+    nameInput       : document.querySelector('#name'),
+    emailInput      : document.querySelector('#email'),
+    messageInput    : document.querySelector('#message'),
+    errorMessage    : document.querySelector('.js-errors'),
     submitFormButton: document.querySelector('.js-submitFormButton'),
 
     init: () => {
