@@ -1,4 +1,4 @@
-# Meow Development, a fake web Agency with Cats !
+# Meow Development, fake web Agency with Cats !
 
 
 One Page que j'ai fait pour m'amuser et apprendre quelques trucs en JS...  
