@@ -1,9 +1,8 @@
 # Meow Development, a fake web Agency with Cats !
 
 
-Voici un site One Page que j'ai fait pour m'amuser et m'exercer.  
-Le but était de faire un menu Burger dans un premier temps, puis d'utiliser le system de grilles avec les flexbox si besoin, et de rendre le tout Responsive.
-
+One Page que j'ai fait pour m'amuser et apprendre quelques trucs en JS...  
+Le but premier était de construire une navbar responsive avec les grid. Bon finalement, c'est devenu la page d'une fausse agence web dirigée par des matous sans scrupules <3
 
 *Crédits photos : [Unsplash](https://unsplash.com/)*  
 *This project is licensed under the terms of the MIT license.*  
