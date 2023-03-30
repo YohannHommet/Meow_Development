@@ -1,10 +1,8 @@
 const app = {
-
     // Nombre d'images sur lesquelles il faut boucler dans createThumbnail()
-    img: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41],
+    img: Array.from(Array(42).keys()),
     displayedImg: [],
     newWallButton: document.querySelector("#newWallButton"),
-
 
     init: () => {
         tilt.init();
@@ -23,7 +21,6 @@ const app = {
         app.createThumbnail();
     },
 
-
     /**
      * Create a new wall on button click
      */
@@ -35,7 +32,6 @@ const app = {
         }
         app.createThumbnail();
     },
-
 
     /**
      * Create a new wall every page refresh
@@ -72,10 +68,7 @@ const app = {
             "max-glare": 0.8,
             axis: 'x',
         });
-
     },
-
-
 }
 
 // Onclick function

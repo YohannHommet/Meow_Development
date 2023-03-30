@@ -7,7 +7,6 @@ const form = {
     submitFormButton: document.querySelector('.js-submitFormButton'),
 
     init: () => {
-
         form.nameInput.addEventListener('keyup', form.handleNameInput);
         form.emailInput.addEventListener('keyup', form.handleEmailInput);
         form.messageInput.addEventListener('keyup', form.handleMessageInput);
@@ -37,7 +36,7 @@ const form = {
         let emailFormat = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         let emailTest = emailFormat.test(emailValue);
 
-        if (emailTest === true) {
+        if (emailTest) {
             form.formValidation(form.emailInput, '1px #555 solid', false, 'pointer');
             return true;
         } else {
