@@ -2,51 +2,50 @@
 <html lang="fr">
 
 <head>
+    <!-- Meta -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Web Agnecy made by cats !">
     <meta name="keywords" content="web agency cats www html css js php">
-
+    <meta name="author" content="Yohann Hommet">
+    <!-- Links -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-
+    <!-- Title -->
     <title>Meow Development</title>
 </head>
 
 <body>
 
     <div class="container">
-        <!-- ?HEADER -->
+
+        <!-------------------- HEADER -->
         <header class="navbar" id="header" role="navigation">
             <a href="#" class="logo">Meow Development<span style="margin-left: 10px; font-size: 1.7rem;">&hearts;</span></a>
 
             <div class="burgerToggle" onclick="toggleMenu()"></div>
 
-            <nav class="nav">
-                <a class="underline" href="#banner" onclick="toggleMenu()">Accueil</a>
-                <a class="underline" href="#wall" onclick="toggleMenu()">The Wall</a>
-                <a class="underline" href="#team" onclick="toggleMenu()">The Meow Team</a>
-                <a class="underline" href="#contact" onclick="toggleMenu()">Contact</a>
+            <nav class="nav" role="navigation">
+                <a class="underline" href="#banner" title="Accueil" onclick="toggleMenu()">Accueil</a>
+                <a class="underline" href="#wall" title="The wall" onclick="toggleMenu()">The Wall</a>
+                <a class="underline" href="#team" title="The team" onclick="toggleMenu()">The Meow Team</a>
+                <a class="underline" href="#contact" title="Contact" onclick="toggleMenu()">Contact</a>
             </nav>
         </header>
 
         <main>
-
             <!-- BANNER -->
             <section id="banner" role="img">
-
                 <div class="content">
                     <h1 class="title">Catisfaction </h1>
                     <p>Always Satisfied,</p>
                     <p>Meow Approved !</p>
                 </div>
-
             </section>
 
             <!-- THE WALL -->
             <section id="wall">
-
                 <h2>The <span class="pink sub">W</span>all</h2>
 
                 <div class="thumbnail"></div>
@@ -54,12 +53,10 @@
                 <div class="button-block">
                     <button type="button" id="newWallButton" class="button">New Wall !</button>
                 </div>
-
             </section>
 
             <!-- THE TEAM -->
             <section id="team">
-
                 <div class="block">
                     <div class="blockDescription">
                         <h2>The Meow <span class="pink sub">T</span>eam</h2>
@@ -70,21 +67,23 @@
 
                 <div class="team">
                     <div class="card">
-                        <figcaption class="imgBx" role="img">
-                            <img src="assets/img/team/sm_22.jpg" alt="Yohann">
-                        </figcaption>
+                        <figure class="imgBx" role="img">
+                            <img src="assets/img/team/sm_22.jpg" alt="logo Yohann">
+                            <figcaption class="imgBx">Yohann</figcaption>
+                        </figure>
                         <div class="card-content">
                             <p>
-                                Passionné d'informatique, je suis développeur FullStack.. Je suis avant tout auto-didacte, et j'ai compléter mes connaissances en faisant une formation développeur web avec O'Clock. Je suis aujourd'hui en poste dans une start-up Angevine.
+                                Passionné d'informatique, je suis développeur FullStack.. Avant tout auto-didacte, j'ai compléter mes connaissances avec une formation de développeur web. Je suis aujourd'hui en poste dans une belle start-up Angevine, sur la stack Laravel/Vue.
                             </p>
                             <h3 class="name blue">Yohann</h3>
                         </div>
                     </div>
 
                     <div class="card">
-                        <figcaption class="imgBx" role="img">
-                            <img src="assets/img/team/sm_17.jpg" alt="Justine">
-                        </figcaption>
+                        <figure class="imgBx" role="img">
+                            <img src="assets/img/team/sm_17.jpg" alt="logo Justine">
+                            <figcaption>Justine</figcaption>
+                        </figure>
                         <div class="card-content">
                             <p>
                                 J'ai fait ma formation en développement web à Angers. Après un stage de 4 mois, j'ai trouvé un poste d'intégratrice développeuse Wordpress dans une agence sur Cholet. Je fais de l'intégration, du débogage, de la mise en ligne, et je travail sur pleins de projets très intéressants !
@@ -95,16 +94,14 @@
                 </div>
             </section>
 
-
             <!-- CONTACT -->
             <section id="contact">
-
                 <div class="block">
                     <h2 class="title">Send us a <span class="pink sub">M</span>eow !</h2>
-                    <p>Here you can send us a cute message if you need more informations about us !</p>
+                    <p>Here you can send us a cute message if you need more information about us !</p>
                 </div>
 
-                <form action="https://formsubmit.co/58d369dbd561e229e37901a22c3008df" method="post" id="contactForm">
+                <form method="post" id="contactForm" name="contactForm" data-netlify="true">
                     <div class="contactForm">
                         <div class="inputBox">
                             <label for="name">
@@ -113,7 +110,7 @@
                         </div>
                         <div class="inputBox">
                             <label for="email">
-                                <input type="email" name="email" id="email" placeholder="Email*" required>
+                                <input type="email" name="email" id="email" placeholder="Email*">
                             </label>
                         </div>
                         <div class="inputBox last">
@@ -129,31 +126,30 @@
                         </div>
                     </div>
                 </form>
-
             </section>
-
         </main>
-
     </div>
 
     <!-- ?FOOTER -->
     <footer id="footer">
-
         <div class="block">
-            <h3>Meow Development Agency</h3>
+            <h3>Meow Development | Web Agency</h3>
             <p><span class="blue footer-letter">Y</span>ohann & <span class="pink footer-letter">J</span>ustine</p>
         </div>
 
         <div class="social">
             <ul class="">
                 <li>
-                    <a href="https://twitter.com/YoH_DevBack" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/YoH_DevBack" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter" aria-hidden="true"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/yohann-hommet/" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/yohann-hommet/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
                 </li>
                 <li>
-                    <a href="https://github.com/YohannHommet" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
+                    <a href="https://github.com/YohannHommet" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a href="mailto:hommet.yohann@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope" aria-hidden="true"></i></a>
                 </li>
             </ul>
         </div>
@@ -161,16 +157,12 @@
         <div class="block">
             <p class="love small">Made with <span style="text-decoration: line-through;">Cats</span> Love, Copyright &copy; 2023</p>
         </div>
-
-
     </footer>
 
-
     <!-- SCRIPT -->
-    <script type="text/javascript" src="assets/js/app.js"></script>
-    <script type="text/javascript" src="assets/js/form.js"></script>
-    <script type="text/javascript" src="assets/js/tilt.js"></script>
-    <script type="text/javascript" src="assets/js/vanilla-tilt.min.js"></script>
-
+    <script defer type="text/javascript" src="assets/js/app.js"></script>
+    <script defer type="text/javascript" src="assets/js/form.js"></script>
+    <script defer type="text/javascript" src="assets/js/tilt.js"></script>
+    <script defer type="text/javascript" src="assets/js/vanilla-tilt.min.js"></script>
 </body>
 </html>
