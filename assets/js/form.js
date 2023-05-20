@@ -1,78 +1,77 @@
 const form = {
-
-    nameInput       : document.querySelector('#name'),
-    emailInput      : document.querySelector('#email'),
-    messageInput    : document.querySelector('#message'),
-    errorMessage    : document.querySelector('.js-errors'),
+    nameInput: document.querySelector('#name'),
+    emailInput: document.querySelector('#email'),
+    messageInput: document.querySelector('#message'),
+    errorMessage: document.querySelector('.js-errors'),
     submitFormButton: document.querySelector('.js-submitFormButton'),
 
-    init: () => {
+    init: () => {    
         form.nameInput.addEventListener('keyup', form.handleNameInput);
         form.emailInput.addEventListener('keyup', form.handleEmailInput);
         form.messageInput.addEventListener('keyup', form.handleMessageInput);
     },
 
+    handleNameInput: () => {
+        const nameValue = form.nameInput.value;
+        const namePolicy = /^[a-zA-Z0-9_-]{3,16}$/;
+        const isNameValid = namePolicy.test(nameValue);
+
+        isNameValid
+            ? form.generateValidInputStyle(form.nameInput)
+            : form.generateNotValidInputStyle(form.nameInput, "* Name does not match requirements.");
+    },
+
+    handleEmailInput: () => {
+        const emailValue = form.emailInput.value;
+        const emailPolicy = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        const isEmailValid = emailPolicy.test(emailValue);
+
+        isEmailValid
+            ? form.generateValidInputStyle(form.emailInput)
+            : form.generateNotValidInputStyle(form.emailInput, "* Email does not match requirements");
+    },
+
+    handleMessageInput: () => {
+        const messageValue = form.messageInput.value;
+        const messagePolicy = /^[a-zA-Z0-9_-]{6,}$/;
+        const isMessageValid = messagePolicy.test(messageValue);
+
+        isMessageValid
+            ? form.generateValidInputStyle(form.messageInput)
+            : form.generateNotValidInputStyle(form.messageInput, "* Message does not match requirements.");
+    },
+
+    generateValidInputStyle: (element) => {
+        element.style.border = '1px #555 solid';
+
+        // Submit button
+        element.value && element.value.length > 0
+            ? form.submitFormButton.disabled = false
+            : form.submitFormButton.disabled = true;
+        form.submitFormButton.style.cursor = 'pointer';
+
+        // Error message
+        form.errorMessage.innerText = "";
+        form.errorMessage.style.visibility = 'hidden';
+    },
+
     /**
-     * Vérification des input sur la page contact
-     * @returns 
+     * @var {HTMLElement} element
+     * @var {string} message
      */
-    handleNameInput: () => 
-    {
-        let nameValue = form.nameInput.value;
+    generateNotValidInputStyle: (element, message) => {
+        if (element.value && element.value.length > 0) {
+            element.style.border = '1px #ff0073 solid';
 
-        if (nameValue.length < 3) {
-            form.formValidation(form.nameInput, '1px #ff0073 solid', true, 'not-allowed', "* 3 characters min please.");
-            return true;
-        } else {
-            form.formValidation(form.nameInput, '1px #555 solid', false, 'pointer');
-            return false
-        }
-    },
+            // Submit button
+            form.submitFormButton.disabled = true;
+            form.submitFormButton.style.cursor = 'not-allowed';
 
-
-    handleEmailInput: () => 
-    {
-        let emailValue = form.emailInput.value;
-        let emailFormat = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        let emailTest = emailFormat.test(emailValue);
-
-        if (emailTest) {
-            form.formValidation(form.emailInput, '1px #555 solid', false, 'pointer');
-            return true;
-        } else {
-            form.formValidation(form.emailInput, '1px #ff0073 solid', true, 'not-allowed', "* Email does not match requirements");
-            return false;
-        }
-    },
-
-
-    handleMessageInput: () => 
-    {
-        let messageValue = form.messageInput.value;
-
-        if (messageValue.length < 6) {
-            form.formValidation(form.messageInput, '1px #ff0073 solid', true, 'not-allowed', "* 6 Characters min please.");
-            return true;
-        } else {
-            form.formValidation(form.messageInput, '1px #555 solid', false, 'pointer')
-            return false
-        }
-    },
-
-
-    formValidation: (element, border, isDisabled, cursor, message = null) => 
-    {
-        element.style.border = border;
-        form.submitFormButton.disabled = isDisabled;
-        form.submitFormButton.style.cursor = cursor;
-
-        if (message != null) {
-            form.errorMessage.style.visibility = 'visible';
+            // Error message
             form.errorMessage.innerText = message;
+            form.errorMessage.style.visibility = 'visible';
         } else {
-            form.errorMessage.style.visibility = 'hidden';
-            form.errorMessage.innerText = "";
+            form.generateValidInputStyle(element);
         }
     },
-
 }
