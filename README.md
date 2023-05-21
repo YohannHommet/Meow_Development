@@ -2,9 +2,7 @@
   
   
 ### Introduction
-One Page que j'ai fait pour m'amuser et apprendre quelques trucs en JS...  
-Le but premier était de construire une navbar responsive avec les grid. Bon finalement, c'est devenu la page d'une fausse agence web dirigée par des matous sans scrupules <3
-  
+One page of a fake web agency, owned by two wild cats... It could be us, and it could be real :3
   
 ### Crédits
 *Crédits photos : [Unsplash](https://unsplash.com/)*  
