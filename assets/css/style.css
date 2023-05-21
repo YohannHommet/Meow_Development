@@ -167,7 +167,7 @@ p::first-letter {
 
 #banner {
     position: relative;
-    background-image: url(/assets/img/bg_chat.jpg);
+    background-image: url(/assets/img/bg_chat.webp);
     background-size: cover;
     background-position: center center;
 
@@ -359,7 +359,7 @@ p::first-letter {
 
 #team .block .bg {
     position: absolute;
-    background: url(/assets/img/patte_noBg.png) no-repeat center center;
+    background: url(/assets/img/patte_noBg.webp) no-repeat center center;
     top: 1rem;
     right: 15rem;
     width: 500px;
@@ -465,7 +465,7 @@ p::first-letter {
     display: grid;
     grid-template-columns: 60% 40%;
     grid-template-rows: 1fr;
-    background: url(/assets/img/bg_contact-dark.jpg) no-repeat center center;
+    background: url(/assets/img/bg_contact-dark.webp) no-repeat center center;
     background-size: cover;
 }
 

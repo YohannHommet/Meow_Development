@@ -9,9 +9,13 @@
     <meta name="description" content="Web Agnecy made by cats !">
     <meta name="keywords" content="web agency cats www html css js php">
     <meta name="author" content="Yohann Hommet">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <!-- Fonts -->
+    <link preload rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap'>
     <!-- Links -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link preload rel="stylesheet" href="assets/css/style.css">
+    <link preload rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <!-- Title -->
     <title>Meow Development</title>
 </head>
@@ -22,20 +26,20 @@
 
         <!-------------------- HEADER -->
         <header class="navbar" id="header" role="navigation">
-            <a href="#" class="logo">Meow Development<span style="margin-left: 10px; font-size: 1.7rem;">&hearts;</span></a>
+            <a href="#" class="logo" aria-label="meow development logo">Meow Development<span style="margin-left: 10px; font-size: 1.7rem;">&hearts;</span></a>
 
             <div class="burgerToggle" onclick="toggleMenu()"></div>
 
             <nav class="nav" role="navigation">
-                <a class="underline" href="#banner" title="Accueil" onclick="toggleMenu()">Accueil</a>
-                <a class="underline" href="#wall" title="The wall" onclick="toggleMenu()">The Wall</a>
-                <a class="underline" href="#team" title="The team" onclick="toggleMenu()">The Meow Team</a>
-                <a class="underline" href="#contact" title="Contact" onclick="toggleMenu()">Contact</a>
+                <a class="underline" href="#banner" title="Accueil" aria-label="accueil" onclick="toggleMenu()">Accueil</a>
+                <a class="underline" href="#wall" title="The wall" aria-label="the wall" onclick="toggleMenu()">The Wall</a>
+                <a class="underline" href="#team" title="The team" aria-label="the team" onclick="toggleMenu()">The Meow Team</a>
+                <a class="underline" href="#contact" title="Contact" aria-label="contact" onclick="toggleMenu()">Contact</a>
             </nav>
         </header>
 
         <main>
-            <!-- BANNER -->
+            <!<!-------------------- BANNER -->
             <section id="banner" role="img">
                 <div class="content">
                     <h1 class="title">Catisfaction </h1>
@@ -44,7 +48,7 @@
                 </div>
             </section>
 
-            <!-- THE WALL -->
+            <!-------------------- THE WALL -->
             <section id="wall">
                 <h2>The <span class="pink sub">W</span>all</h2>
 
@@ -55,7 +59,7 @@
                 </div>
             </section>
 
-            <!-- THE TEAM -->
+            <!-------------------- THE TEAM -->
             <section id="team">
                 <div class="block">
                     <div class="blockDescription">
@@ -68,7 +72,7 @@
                 <div class="team">
                     <div class="card">
                         <figure class="imgBx" role="img">
-                            <img src="assets/img/team/sm_22.jpg" alt="logo Yohann">
+                            <img src="assets/img/team/sm_22.webp" alt="logo Yohann">
                             <figcaption class="imgBx">Yohann</figcaption>
                         </figure>
                         <div class="card-content">
@@ -81,7 +85,7 @@
 
                     <div class="card">
                         <figure class="imgBx" role="img">
-                            <img src="assets/img/team/sm_17.jpg" alt="logo Justine">
+                            <img src="assets/img/team/sm_17.webp" alt="logo Justine">
                             <figcaption>Justine</figcaption>
                         </figure>
                         <div class="card-content">
@@ -94,11 +98,11 @@
                 </div>
             </section>
 
-            <!-- CONTACT -->
+            <!-------------------- CONTACT -->
             <section id="contact">
                 <div class="block">
                     <h2 class="title">Send us a <span class="pink sub">M</span>eow !</h2>
-                    <p>Here you can send us a cute message if you need more information about us !</p>
+                    <p>Need more information... Send us a cute meow message :3</p>
                 </div>
 
                 <form method="post" id="contactForm" name="contactForm" data-netlify="true">
@@ -130,7 +134,7 @@
         </main>
     </div>
 
-    <!-- ?FOOTER -->
+    <!-------------------- FOOTER -->
     <footer id="footer">
         <div class="block">
             <h3>Meow Development | Web Agency</h3>
@@ -140,16 +144,16 @@
         <div class="social">
             <ul class="">
                 <li>
-                    <a href="https://twitter.com/YoH_DevBack" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/YoH_DevBack" target="_blank" rel="noopener noreferrer" aria-label="twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/yohann-hommet/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/yohann-hommet/" target="_blank" rel="noopener noreferrer" aria-label="linkedin"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
                 </li>
                 <li>
-                    <a href="https://github.com/YohannHommet" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i></a>
+                    <a href="https://github.com/YohannHommet" target="_blank" rel="noopener noreferrer" aria-label="github"><i class="fab fa-github" aria-hidden="true"></i></a>
                 </li>
                 <li>
-                    <a href="mailto:hommet.yohann@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                    <a href="mailto:hommet.yohann@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
                 </li>
             </ul>
         </div>
