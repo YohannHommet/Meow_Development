@@ -2,6 +2,7 @@ const form = {
     nameInput: document.querySelector('#name'),
     emailInput: document.querySelector('#email'),
     messageInput: document.querySelector('#message'),
+    messageLengthCounter: document.querySelector('.js-messageLengthCounter'),
     errorMessage: document.querySelector('.js-errors'),
     submitFormButton: document.querySelector('.js-submitFormButton'),
 
@@ -33,8 +34,11 @@ const form = {
 
     handleMessageInput: () => {
         const messageValue = form.messageInput.value;
-        const messagePolicy = /^[a-zA-Z0-9_-]{6,}$/;
+        const messagePolicy = /^[a-zA-Z0-9_-]{6,500}$/;
         const isMessageValid = messagePolicy.test(messageValue);
+
+        // display message length counter
+        form.messageLengthCounter.innerText = messageValue.length + " / 500";
 
         isMessageValid
             ? form.generateValidInputStyle(form.messageInput)

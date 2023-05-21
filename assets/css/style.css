@@ -503,6 +503,7 @@ p::first-letter {
 }
 
 #contact .contactForm .last {
+    position: relative;
     margin-bottom: 0;
 }
 
@@ -519,7 +520,17 @@ p::first-letter {
 }
 
 .contactForm .inputBox textarea {
+    position: relative;
     height: 300px;
+}
+
+.contactForm .inputBox .js-messageLengthCounter{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: rgb(195, 195, 195);
+    font-size: 0.8em;
+    font-weight: 300;
 }
 
 #contact form button {
