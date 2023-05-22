@@ -6,7 +6,7 @@ const form = {
     errorMessage: document.querySelector('.js-errors'),
     submitFormButton: document.querySelector('.js-submitFormButton'),
 
-    init: () => {    
+    init: () => {
         form.nameInput.addEventListener('keyup', form.handleNameInput);
         form.emailInput.addEventListener('keyup', form.handleEmailInput);
         form.messageInput.addEventListener('keyup', form.handleMessageInput);
@@ -64,18 +64,14 @@ const form = {
      * @var {string} message
      */
     generateNotValidInputStyle: (element, message) => {
-        if (element.value && element.value.length > 0) {
-            element.style.border = '1px #ff0073 solid';
+        element.style.border = '1px #ff0073 solid';
 
-            // Submit button
-            form.submitFormButton.disabled = true;
-            form.submitFormButton.style.cursor = 'not-allowed';
+        // Submit button
+        form.submitFormButton.disabled = true;
+        form.submitFormButton.style.cursor = 'not-allowed';
 
-            // Error message
-            form.errorMessage.innerText = message;
-            form.errorMessage.style.visibility = 'visible';
-        } else {
-            form.generateValidInputStyle(element);
-        }
+        // Error message
+        form.errorMessage.innerText = message;
+        form.errorMessage.style.visibility = 'visible'; I
     },
 }
