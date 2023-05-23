@@ -1,14 +1,15 @@
-# Meow Development, fake web Agency with Cats !
+[![XO code style](https://shields.io/badge/code_style-5ed9c7?logo=xo&labelColor=gray)](https://github.com/xojs/xo)
+
+# Meow Development, a fake web Agency with Cats
   
-  
-### Introduction
+## Introduction
+
 One page of a fake web agency, owned by two wild cats... It could be us, and it could be real :3
   
 ### Crédits
+
 *Crédits photos : [Unsplash](https://unsplash.com/)*  
   
-  
 ### Copyrights
+
 *This project is licensed under the terms of the MIT license.*  
-
-

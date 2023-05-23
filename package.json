@@ -1,0 +1,27 @@
+{
+  "name": "meow_development",
+  "version": "1.0.0",
+  "description": "Web agency ruled by two wild cats :3",
+  "main": "/public/index.html",
+  "scripts": {
+    "test": "xo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YohannHommet/Meow_Development.git"
+  },
+  "keywords": [
+    "web",
+    "agency",
+    "development"
+  ],
+  "author": "hommet.yohann@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YohannHommet/Meow_Development/issues"
+  },
+  "homepage": "https://github.com/YohannHommet/Meow_Development#readme",
+  "devDependencies": {
+    "xo": "^0.54.2"
+  }
+}
