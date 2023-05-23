@@ -1,10 +1,10 @@
 const form = {
-  nameInput: window.document.querySelector('#name'),
-  emailInput: window.document.querySelector('#email'),
-  messageInput: window.document.querySelector('#message'),
-  messageLengthCounter: window.document.querySelector('.js-messageLengthCounter'),
-  errorMessage: window.document.querySelector('.js-errors'),
-  submitFormButton: window.document.querySelector('.js-submitFormButton'),
+  nameInput: document.querySelector('#name'),
+  emailInput: document.querySelector('#email'),
+  messageInput: document.querySelector('#message'),
+  messageLengthCounter: document.querySelector('.js-messageLengthCounter'),
+  errorMessage: document.querySelector('.js-errors'),
+  submitFormButton: document.querySelector('.js-submitFormButton'),
 
   init() {
     form.nameInput.addEventListener('keyup', form.handleNameInput);

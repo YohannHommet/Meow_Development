@@ -1,6 +1,6 @@
 const tilt = {
   init() {
-    VanillaTilt.init(window.document.querySelectorAll('.thumb'), {
+    VanillaTilt.init(document.querySelectorAll('.thumb'), {
       max: 25,
       speed: 400,
       glare: true,
@@ -8,7 +8,7 @@ const tilt = {
       axis: 'x',
     });
 
-    VanillaTilt.init(window.document.querySelectorAll('.card'), {
+    VanillaTilt.init(document.querySelectorAll('.card'), {
       max: 10,
       speed: 100,
       glare: true,

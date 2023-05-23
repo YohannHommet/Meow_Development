@@ -1,101 +1,101 @@
 const app = {
-	maxThumbs: 12,
-	imagesLength: Array.from(Array.from({length: 42}).keys()),
-	displayedImg: [],
-	newWallButton: window.document.querySelector('#newWallButton'),
-	thumbnail: window.document.querySelector('.thumbnail'),
+  maxThumbs: 12,
+  imagesLength: Array.from(Array.from({length: 42}).keys()),
+  displayedImg: [],
+  newWallButton: document.querySelector('#newWallButton'),
+  thumbnail: document.querySelector('.thumbnail'),
 
-	init() {
-		tilt.init();
-		form.init();
+  init() {
+    tilt.init();
+    form.init();
 
-		// Update nav style on scroll
-		window.addEventListener('scroll', () => {
-			const navbar = window.document.querySelector('.navbar');
-			navbar.classList.toggle('sticky', window.scrollY > 0);
-		});
+    // Update nav style on scroll
+    addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('sticky', scrollY > 0);
+    });
 
-		app.newWallButton.addEventListener('click', app.newWall);
-		app.generateThumbnails();
-	},
+    app.newWallButton.addEventListener('click', app.newWall);
+    app.generateThumbnails();
+  },
 
-	/**
+  /**
      * Create a new wall on button click
      * @returns {void}
      */
-	newWall() {
-		const {thumbnail} = app;
+  newWall() {
+    const {thumbnail} = app;
 
-		while (thumbnail.firstChild) {
-			thumbnail.lastChild.remove();
-		}
+    while (thumbnail.firstChild) {
+      thumbnail.lastChild.remove();
+    }
 
-		app.generateThumbnails();
-	},
+    app.generateThumbnails();
+  },
 
-	/**
-     * Create a new wall on button click
-     * @returns {void}
-     */
-	generateThumbnails() {
-		const {maxThumbs, thumbnail} = app;
-		const numbers = new Set();
+  /**
+   * Create a new wall on button click
+   * @returns {void}
+   */
+  generateThumbnails() {
+    const {maxThumbs, thumbnail} = app;
+    const numbers = new Set();
 
-		for (let i = 0; i < maxThumbs; i++) {
-			let randomNumber;
+    for (let i = 0; i < maxThumbs; i++) {
+      let randomNumber;
 
-			do {
-				randomNumber = app.getRandomNumber();
-			} while (numbers.has(randomNumber));
+      do {
+        randomNumber = app.getRandomNumber();
+      } while (numbers.has(randomNumber));
 
-			numbers.add(randomNumber);
-			const thumbnailImg = app.createThumbnail(randomNumber);
-			thumbnail.append(thumbnailImg);
-		}
+      numbers.add(randomNumber);
+      const thumbnailImg = app.createThumbnail(randomNumber);
+      thumbnail.append(thumbnailImg);
+    }
 
-		app.initVanillaTilt();
-	},
+    app.initVanillaTilt();
+  },
 
-	/**
-     * @returns {number}
-     **/
-	getRandomNumber: () => Math.floor(Math.random() * app.imagesLength.length),
+  /**
+   * @returns {number}
+   **/
+  getRandomNumber: () => Math.floor(Math.random() * app.imagesLength.length),
 
-	/**
-     * @param {number} number
-     * @returns {HTMLImageElement}
-     */
-	createThumbnail(number) {
-		const thumbnailImg = window.document.createElement('img');
-		const src = `/assets/img/cats/sm_${number}.jpg`;
+  /**
+   * @param {number} number
+   * @returns {HTMLImageElement}
+   */
+  createThumbnail(number) {
+    const thumbnailImg = document.createElement('img');
+    const src = `/assets/img/cats/sm_${number}.jpg`;
 
-		// Set attributes
-		thumbnailImg.src = src;
-		thumbnailImg.setAttribute(`data-tilt-${number}`, '');
-		thumbnailImg.alt = `Cat image n°${number}`;
-		thumbnailImg.classList.add('thumb');
+    // Set attributes
+    thumbnailImg.src = src;
+    thumbnailImg.setAttribute(`data-tilt-${number}`, '');
+    thumbnailImg.alt = `Cat image n°${number}`;
+    thumbnailImg.classList.add('thumb');
 
-		return thumbnailImg;
-	},
+    return thumbnailImg;
+  },
 
-	initVanillaTilt() {
-		VanillaTilt.init(window.document.querySelectorAll('.thumb'), {
-			max: 25,
-			speed: 400,
-			glare: true,
-			'max-glare': 0.5,
-			axis: 'x',
-		});
-	},
+  initVanillaTilt() {
+    VanillaTilt.init(document.querySelectorAll('.thumb'), {
+      max: 25,
+      speed: 400,
+      glare: true,
+      'max-glare': 0.5,
+      axis: 'x',
+    });
+  },
 };
 
 // Onclick function
 const toggleMenu = () => {
-	const burger = window.document.querySelector('.burgerToggle');
-	const nav = window.document.querySelector('.nav');
+  const burger = document.querySelector('.burgerToggle');
+  const nav = document.querySelector('.nav');
 
-	burger.classList.toggle('active');
-	nav.classList.toggle('active');
+  burger.classList.toggle('active');
+  nav.classList.toggle('active');
 };
 
-window.document.addEventListener('DOMContentLoaded', app.init);
+document.addEventListener('DOMContentLoaded', app.init);
