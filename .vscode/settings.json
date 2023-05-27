@@ -13,7 +13,6 @@
   "editor.wordWrap": "on",
   "editor.renderLineHighlight": "gutter",
   "editor.cursorStyle": "line",
-  "editor.cursorWidth": 2,
   "workbench.editor.pinnedTabSizing": "normal",
   "terminal.integrated.fontSize": 16,
   "workbench.editor.wrapTabs": true,
