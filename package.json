@@ -4,7 +4,8 @@
   "description": "Web agency ruled by two wild cats :3",
   "main": "/public/index.html",
   "scripts": {
-    "test": "xo"
+    "test": "xo",
+    "lint": "npx xo --space --fix "
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,27 @@
   "homepage": "https://github.com/YohannHommet/Meow_Development#readme",
   "devDependencies": {
     "xo": "^0.54.2"
+  },
+  "xo": {
+    "space": true,
+    "semicolon": true,
+    "rules": {
+      "no-unused-vars": [
+        "error",
+        {
+          "varsIgnorePattern": "h"
+        }
+      ],
+      "no-unused-expressions": [
+        "error",
+        {
+          "allowShortCircuit": true,
+          "allowTernary": true
+        }
+      ]
+    },
+    "ignores": [
+      "public/js/*.js"
+    ]
   }
 }
