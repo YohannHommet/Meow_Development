@@ -1,0 +1,50 @@
+{
+  "name": "meow_development",
+  "version": "1.0.0",
+  "description": "Web agency ruled by two wild cats :3",
+  "main": "/public/index.html",
+  "scripts": {
+    "test": "xo",
+    "lint": "npx xo --space --fix "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YohannHommet/Meow_Development.git"
+  },
+  "keywords": [
+    "web",
+    "agency",
+    "development"
+  ],
+  "author": "hommet.yohann@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YohannHommet/Meow_Development/issues"
+  },
+  "homepage": "https://github.com/YohannHommet/Meow_Development#readme",
+  "devDependencies": {
+    "xo": "^0.54.2"
+  },
+  "xo": {
+    "space": true,
+    "semicolon": true,
+    "rules": {
+      "no-unused-vars": [
+        "error",
+        {
+          "varsIgnorePattern": "h"
+        }
+      ],
+      "no-unused-expressions": [
+        "error",
+        {
+          "allowShortCircuit": true,
+          "allowTernary": true
+        }
+      ]
+    },
+    "ignores": [
+      "public/js/*.js"
+    ]
+  }
+}
