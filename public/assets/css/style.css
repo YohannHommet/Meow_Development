@@ -106,7 +106,7 @@ p::first-letter {
 
     color: var(--primary);
     text-decoration: none;
-    animation: kit 2s ease infinite alternate;
+    animation: kit 3s ease infinite alternate;
 }
 
 #header nav {
@@ -597,6 +597,7 @@ p::first-letter {
 
 
 #footer {
+    position: relative;
     background: #050505;
     border-top: 1px solid #313131;
     padding: 100px;
@@ -695,6 +696,34 @@ p::first-letter {
     font-size: 1.1rem;
     color: var(--text-primary);
 }
+
+#footer .link__scroll {
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    text-decoration: none;
+    opacity: 0.5;
+    transition: 0.3s;
+    animation: topToBottom 1.5s ease infinite alternate;
+}
+
+#footer .link__scroll:hover {
+    opacity: 0.9;
+}
+
+#footer .link__scroll i {
+    padding: 0.6rem;
+    border-radius: 50%;
+    color: var(--text-primary);
+    border: 1px solid var(--text-primary);
+    transition: 0.4s;
+}
+
+#footer .link__scroll i:hover {
+    color: var(--primary);
+    border: 1px solid var(--secondary);
+}
+
 
 
 
@@ -1332,4 +1361,14 @@ p::first-letter {
         opacity: 1;
     }
 
+}
+
+@keyframes topToBottom {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-7px);
+    }
 }
