@@ -1,6 +1,6 @@
 const app = {
   maxThumbs: 12,
-  imagesLength: Array.from(Array.from({ length: 42 }).keys()),
+  imagesLength: Array.from(Array.from({length: 42}).keys()),
   displayedImg: [],
   newWallButton: document.querySelector('#newWallButton'),
   thumbnail: document.querySelector('.thumbnail'),
@@ -24,7 +24,7 @@ const app = {
      * @returns {void}
      */
   newWall() {
-    const { thumbnail } = app;
+    const {thumbnail} = app;
 
     while (thumbnail.firstChild) {
       thumbnail.lastChild.remove();
@@ -38,7 +38,7 @@ const app = {
    * @returns {void}
    */
   generateThumbnails() {
-    const { maxThumbs, thumbnail } = app;
+    const {maxThumbs, thumbnail} = app;
     const numbers = new Set();
 
     for (let i = 0; i < maxThumbs; i++) {

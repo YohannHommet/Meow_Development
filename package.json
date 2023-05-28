@@ -41,7 +41,8 @@
           "allowShortCircuit": true,
           "allowTernary": true
         }
-      ]
+      ],
+      "no-undef": "off"
     },
     "ignores": [
       "public/js/*.js"
