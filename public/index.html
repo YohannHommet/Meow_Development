@@ -10,13 +10,17 @@
     <meta name="keywords" content="web agency cats www html css js php">
     <meta name="author" content="Yohann Hommet">
     <!-- Favicon -->
-    <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <link preload rel="icon" href="../assets/img/favicon.ico" type="image/x-icon" as="image" crossorigin="anonymous">
     <!-- Fonts -->
-    <link preload rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap'>
+    <link preload rel="stylesheet"
+      href='https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap' as="font"
+      crossorigin="anonymous">
     <!-- Icons -->
-    <link preload rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link preload rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous">
     <!-- Css -->
-    <link preload rel="stylesheet" href="assets/css/style.css">
+    <link preload rel="stylesheet" href="assets/css/style.css" as="style" crossorigin="anonymous">
     <!-- Title -->
     <title>Meow Development</title>
 </head>
@@ -146,13 +150,20 @@
         <div class="social">
             <ul class="">
                 <li>
-                    <a href="https://twitter.com/YoH_DevBack" target="_blank" rel="noopener noreferrer" aria-label="twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/YoH_DevBack" target="_blank" rel="noopener noreferrer" aria-label="twitter icon">
+                      <i class="fab fa-twitter" aria-hidden="true"></i>
+                    </a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/yohann-hommet/" target="_blank" rel="noopener noreferrer" aria-label="linkedin"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/yohann-hommet/" target="_blank" rel="noopener noreferrer"
+                      aria-label="linkedin icon">
+                      <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    </a>
                 </li>
                 <li>
-                    <a href="https://github.com/YohannHommet" target="_blank" rel="noopener noreferrer" aria-label="github"><i class="fab fa-github" aria-hidden="true"></i></a>
+                    <a href="https://github.com/YohannHommet" target="_blank" rel="noopener noreferrer" aria-label="github icon">
+                      <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -161,12 +172,15 @@
             <p class="love small">Made with <span style="text-decoration: line-through;">Cats</span> Love, Copyright &copy; 2023</p>
             <a class="link__contact" href="mailto:yohann.hommet@outlook.fr;justine.groiset@outlook.fr">contact</a>
         </div>
+        <a href="#" class="link__scroll" aria-label="scroll to top icon" onclick="document.body.scrollIntoView()">
+          <i class="fas fa-chevron-up fa-lg"></i>
+        </a>
     </footer>
 
     <!-- SCRIPT -->
-    <script defer type="text/javascript" src="assets/js/app.js"></script>
-    <script defer type="text/javascript" src="assets/js/tilt.js"></script>
-    <script defer type="text/javascript" src="assets/js/form.js"></script>
-    <script defer type="text/javascript" src="assets/js/vanilla-tilt.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/app.js" async></script>
+    <script defer type="text/javascript" src="assets/js/tilt.js" async></script>
+    <script defer type="text/javascript" src="assets/js/form.js" async></script>
+    <script defer type="text/javascript" src="assets/js/vanilla-tilt.min.js" async></script>
 </body>
 </html>
