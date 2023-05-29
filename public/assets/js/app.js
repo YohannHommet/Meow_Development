@@ -6,23 +6,22 @@ const app = {
   thumbnail: document.querySelector('.thumbnail'),
 
   init() {
+    // Initialize modules
     tilt.init();
     form.init();
+    animation.init();
 
-    // Update nav style on scroll
-    addEventListener('scroll', () => {
-      const navbar = document.querySelector('.navbar');
-      navbar.classList.toggle('sticky', scrollY > 0);
-    });
-
-    app.newWallButton.addEventListener('click', app.newWall);
+    // Initialize Thumbnails
     app.generateThumbnails();
+
+    // Event listeners
+    app.newWallButton.addEventListener('click', app.newWall);
   },
 
   /**
-     * Create a new wall on button click
-     * @returns {void}
-     */
+   * Create a new wall on button click
+   * @returns {void}
+   */
   newWall() {
     const {thumbnail} = app;
 
