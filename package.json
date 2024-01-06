@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/YohannHommet/Meow_Development#readme",
   "devDependencies": {
-    "xo": "^0.54.2"
+    "xo": "^0.55.1"
   },
   "xo": {
     "space": true,
