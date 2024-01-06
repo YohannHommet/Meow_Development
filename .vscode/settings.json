@@ -1,6 +1,12 @@
 {
   // "workbench.colorTheme": "Tokyo Night Storm",
+  "terminal.integrated.fontSize": 16,
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.editor.pinnedTabSizing": "normal",
+  "workbench.editor.wrapTabs": true,
+  "workbench.editor.tabCloseButton": "right",
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.activityBar.iconClickBehavior": "focus",
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
   "editor.fontSize": 18,
@@ -13,19 +19,14 @@
   "editor.wordWrap": "on",
   "editor.renderLineHighlight": "gutter",
   "editor.cursorStyle": "line",
-  "workbench.editor.pinnedTabSizing": "normal",
-  "terminal.integrated.fontSize": 16,
-  "workbench.editor.wrapTabs": true,
-  "workbench.editor.tabCloseButton": "right",
-  "workbench.editor.tabSizing": "shrink",
-  "editor.autoIndent": "full",
+  "editor.autoIndent": "advanced",
   "editor.formatOnPaste": true,
   "editor.formatOnType": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll": "explicit"
   },
-  "editor.codeActionsOnSaveTimeout": 5000,
   "editor.detectIndentation": false,
   "editor.minimap.enabled": true,
   "editor.minimap.renderCharacters": true,
@@ -33,7 +34,7 @@
   "editor.minimap.showSlider": "always",
   "editor.suggestSelection": "first",
   "editor.tabCompletion": "on",
-  "editor.wordBasedSuggestions": true,
+  "editor.wordBasedSuggestions": "matchingDocuments",
   "editor.smoothScrolling": true,
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "explicit",
@@ -53,7 +54,26 @@
   "editor.suggest.showProperties": true,
   "editor.suggest.showEvents": true,
   "editor.suggest.showOperators": true,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
-  "workbench.activityBar.iconClickBehavior": "focus",
+  "emmet.includeLanguages": {
+    "postcss": "css",
+  },
+  "emmet.preferences": {
+    "bem.elementSeparator": "__",
+    "bem.modifierSeparator": "_",
+    "css.intUnit": "px",
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "workbench.editor.tabActionLocation": "right",
 }
