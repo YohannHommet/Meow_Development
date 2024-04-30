@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
 :root {
   --primary: #52f1ff;
   --secondary: #f8147c;
@@ -15,7 +17,6 @@
   font-family: "Oswald", sans-serif;
   scroll-behavior: smooth;
   font-size: 16px;
-  font-display: swap;
   text-rendering: optimizeLegibility;
 }
 
@@ -103,13 +104,22 @@ section#contact {
   grid-column: 2/3;
   align-self: center;
 
-  font-size: 1.4rem;
-  font-weight: 400;
-  letter-spacing: 0.05rem;
-
   text-decoration: none;
   animation: flicker 4s infinite alternate;
   color: #fafafa;
+}
+
+
+.tilt-neon-logo {
+  font-family: "Tilt Neon", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+  letter-spacing: 0.05rem;
+  font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
 }
 
 #header nav {
@@ -180,8 +190,8 @@ section#contact {
   height: 100vh;
 
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
 }
 
 #banner:before {
@@ -206,34 +216,59 @@ section#contact {
   background: linear-gradient(to bottom, rgb(0, 0, 0), transparent)
 }
 
-#banner .content {
+#banner .banner_content {
   z-index: 3;
+
+  .banner_content__title {
+    color: transparent;
+    height: 170px;
+    font-size: 7rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 5rem;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px rgb(242, 242, 242)
+  }
+
+  .banner_content__description {
+    color: rgb(195, 195, 195);
+    font-size: 3.5rem;
+    font-weight: 300;
+
+    span {
+      font-size: 3.5rem;
+      font-weight: 300;
+    }
+  }
+
+  .banner_content__scroll {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: white;
+    opacity: 0.8;
+    transition: 0.3s;
+    animation: topToBottom 1.5s ease infinite alternate;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .banner_content__scroll.visible {
+    visibility: visible;
+  }
+
+  .banner_content__scroll:hover {
+    opacity: 0.9;
+  }
+
+  .banner_content__scroll i:hover {
+    color: var(--primary);
+    /* border: 1px solid var(--secondary); */
+  }
 }
 
-#banner .content .title {
-  color: transparent;
-  height: 170px;
-  font-size: 7rem;
-  letter-spacing: 0.2rem;
-  margin-bottom: 5rem;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px rgb(242, 242, 242)
-}
 
-
-#banner .content p {
-  color: rgb(195, 195, 195);
-  font-size: 4rem;
-  font-weight: 300;
-}
-
-#banner .content p:nth-child(2) {
-  margin-left: 3rem;
-}
-
-#banner .content p:nth-child(3) {
-  margin-left: 6rem;
-}
 
 
 /* *************************************** THE WALL ********************************************************* */
@@ -265,6 +300,7 @@ section#contact {
   background-position: center center;
   opacity: 70%;
   margin: auto;
+  cursor: pointer;
 
   transition: all 0.25s linear;
   animation: pop 1.8s ease-in-out normal;
@@ -400,11 +436,11 @@ section#contact {
 }
 
 #team.active .card:nth-child(1) {
-  animation: card1 1.5s ease-out forwards;
+  animation: toRight 1.5s ease-out forwards;
 }
 
 #team.active .card:nth-child(2) {
-  animation: card2 1.5s ease-out forwards;
+  animation: toLeft 1.5s ease-out forwards;
 }
 
 #team .card .imgBx {
@@ -1306,7 +1342,7 @@ section#contact {
   }
 }
 
-@keyframes card1 {
+@keyframes toRight {
   0% {
     transform: translateX(-100%);
   }
@@ -1317,7 +1353,7 @@ section#contact {
   }
 }
 
-@keyframes card2 {
+@keyframes toLeft {
   0% {
     transform: translateX(100%);
   }

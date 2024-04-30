@@ -2,7 +2,7 @@ const animation = {
   navbar: document.querySelector('.navbar'),
   teamSection: document.querySelector('#team'),
   scrollToTopButton: document.querySelector('.link__scroll'),
-  catisfactionTitle: document.querySelector('.title'),
+  catisfactionTitle: document.querySelector('.banner_content__title'),
 
   currentSentenceIndex: 0,
   currentCharIndex: 0,

@@ -14,38 +14,19 @@
   "keywords": [
     "web",
     "agency",
-    "development"
+    "development",
+    "application",
+    "website",
+    "web application",
+    "php",
+    "javascript",
+    "html",
+    "css"
   ],
   "author": "hommet.yohann@gmail.com",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/YohannHommet/Meow_Development/issues"
   },
-  "homepage": "https://github.com/YohannHommet/Meow_Development#readme",
-  "devDependencies": {
-    "xo": "^0.55.1"
-  },
-  "xo": {
-    "space": true,
-    "semicolon": true,
-    "rules": {
-      "no-unused-vars": [
-        "error",
-        {
-          "varsIgnorePattern": "h"
-        }
-      ],
-      "no-unused-expressions": [
-        "error",
-        {
-          "allowShortCircuit": true,
-          "allowTernary": true
-        }
-      ],
-      "no-undef": "off"
-    },
-    "ignores": [
-      "public/js/*.js"
-    ]
-  }
+  "homepage": "https://github.com/YohannHommet/Meow_Development#readme"
 }
