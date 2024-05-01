@@ -79,6 +79,12 @@ const app = {
       window.open(imageData.links.html, '_blank', 'noopener,noreferrer');
     });
 
+    thumbnailImg.setAttribute('loading', 'lazy');
+    thumbnailImg.setAttribute('decoding', 'async');
+    thumbnailImg.setAttribute('data-src', imageData.urls.small);
+
+
+
     return thumbnailImg;
   },
 
