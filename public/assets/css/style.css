@@ -721,8 +721,8 @@ section#contact {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
-  height: 70%;
+  width: 75%;
+  height: 75%;
   display: block;
   border-radius: 50%;
   color: var(--black);
@@ -732,6 +732,7 @@ section#contact {
 
 #footer .social ul li a:hover .social__icons {
   color: var(--secondary);
+  opacity: 0.8;
 }
 
 #footer .link__contact {
@@ -767,7 +768,7 @@ section#contact {
   border-radius: 50%;
   color: var(--text-primary);
   border: 1px solid var(--text-primary);
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
 #footer .link__scroll svg:hover {
