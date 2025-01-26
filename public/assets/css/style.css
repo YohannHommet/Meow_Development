@@ -289,6 +289,7 @@ section#contact {
   display: grid;
   grid-template-columns: repeat(4, 350px);
   grid-template-rows: repeat(3, 350px);
+  gap: 0.5rem;
   margin: auto;
 }
 
@@ -298,7 +299,7 @@ section#contact {
   width: 100%;
   object-fit: cover;
   background-position: center center;
-  opacity: 70%;
+  opacity: 60%;
   margin: auto;
   cursor: pointer;
 
