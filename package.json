@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "Web agency ruled by two wild cats :3",
   "main": "/public/index.html",
-  "scripts": {
-    "test": "xo",
-    "lint": "npx xo --space --fix "
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/YohannHommet/Meow_Development.git"

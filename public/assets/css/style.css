@@ -991,6 +991,10 @@ section#contact {
     font-size: 2.3rem;
   }
 
+  #banner .banner_content__title {
+    font-size: 5rem !important;
+  }
+
   /*  */
   #team div.team {
     display: block;
@@ -1040,6 +1044,8 @@ section#contact {
   .sub {
     font-size: 3.5rem;
   }
+
+
 
   /* *** */
   #wall .thumbnail {
@@ -1140,6 +1146,10 @@ section#contact {
 
   #banner .content p {
     font-size: 2rem;
+  }
+
+  #banner .banner_content__title {
+    font-size: 3.5rem !important;
   }
 
   /* *** */
@@ -1256,10 +1266,6 @@ section#contact {
   }
 
   /*****/
-  #banner {
-    justify-content: center;
-  }
-
   #banner .content {
     transform: translateY(0%);
     display: flex;
@@ -1268,8 +1274,12 @@ section#contact {
     justify-content: center;
   }
 
-  #banner .content .title {
+  #banner .banner_content__title {
     font-size: 3rem;
+  }
+
+  #banner .banner_content__description {
+    font-size: 2rem !important;
   }
 
   #banner .content p {
